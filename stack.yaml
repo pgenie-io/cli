@@ -1,0 +1,20 @@
+resolver: nightly-2022-06-06
+extra-deps:
+  - git: https://github.com/pgenie-tech/api-client-v1
+    commit: 963e287426dd458542a6961e43b3fdb780a2f9b3
+  - git: https://github.com/nikita-volkov/coalmine
+    commit: 6e866804b94e9a1dfe9f014b61cace334efd0333
+  - git: https://github.com/nikita-volkov/moore-machines
+    commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
+  - git: https://github.com/nikita-volkov/isomorphism-class
+    commit: 6030243b4e2c28ab3c010b5f06cb6514d70f9c35
+  - git: https://github.com/nikita-volkov/structure-kit
+    commit: 25191e675725457c36b643fee52f40fdd72e2533
+  - aeson-value-parser-0.19.6
+  - cereal-unordered-containers-0.1
+  - cereal-data-dword-0.1.1
+  - domain-aeson-0.1
+  - domain-cereal-0.1
+  - timestamp-0.2
+  - leb128-cereal-1.2
+  - vector-extras-0.2.7
