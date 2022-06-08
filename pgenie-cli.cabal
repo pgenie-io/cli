@@ -3,6 +3,8 @@ cabal-version: 3.0
 name: pgenie-cli
 version: 0.1
 build-type: Simple
+extra-source-files:
+  domain/*.domain.yaml
 
 common language-settings
   default-extensions: ApplicativeDo, Arrows, BangPatterns, BinaryLiterals, BlockArguments, ConstraintKinds, DataKinds, DefaultSignatures, DeriveDataTypeable, DeriveFoldable, DeriveFunctor, DeriveGeneric, DeriveTraversable, DerivingVia, DuplicateRecordFields, EmptyCase, EmptyDataDecls, FlexibleContexts, FlexibleInstances, FunctionalDependencies, GADTs, GeneralizedNewtypeDeriving, HexFloatLiterals, LambdaCase, LiberalTypeSynonyms, MultiParamTypeClasses, MultiWayIf, NoImplicitPrelude, NoMonomorphismRestriction, NumericUnderscores, OverloadedLabels, OverloadedStrings, PatternGuards, PatternSynonyms, ParallelListComp, QuasiQuotes, RankNTypes, RecordWildCards, ScopedTypeVariables, StandaloneDeriving, StrictData, TemplateHaskell, TupleSections, TypeApplications, TypeFamilies, TypeOperators, UndecidableInstances, ViewPatterns
@@ -12,13 +14,20 @@ library
   import: language-settings
   hs-source-dirs: library
   exposed-modules:
+    PgenieCli.Config.Model
+    PgenieCli.Config.Parsing
     PgenieCli.Prelude
   build-depends:
     attoparsec,
     coalmine,
+    domain,
+    domain-aeson,
+    domain-optics,
     directory,
     pgenie-service,
     rerebase,
+    text-builder-dev,
+    yaml-unscrambler,
 
 test-suite test
   import: language-settings
