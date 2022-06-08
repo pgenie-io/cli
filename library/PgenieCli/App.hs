@@ -15,7 +15,7 @@ main = do
   manager <- HttpClientTls.newTlsManager
   migrations <- readMigrations (#migrationsDir config)
   queries <- readQueries (#queriesDir config)
-  generate manager clientConfig (#outputDir config) (#org config) (#name config) migrations queries
+  generate config manager clientConfig migrations queries
 
 readMigrations :: Path -> IO [(Text, Text)]
 readMigrations =
@@ -26,21 +26,19 @@ readQueries =
   error "TODO"
 
 generate ::
+  Config.Project ->
   HttpClient.Manager ->
   Client.PgenieServiceConfig ->
-  Path ->
-  Name ->
-  Name ->
   [(Text, Text)] ->
   [(Text, Text)] ->
   IO ()
-generate manager clientConfig outputDir org name migrations queries = do
+generate config manager clientConfig migrations queries = do
   res <-
     Client.dispatchMime' manager clientConfig $
       Client.codegenPost $
         Client.CodegenPostRequest
-          (fromNameIn #spinal org)
-          (fromNameIn #spinal name)
+          (fromNameIn #spinal (#org config))
+          (fromNameIn #spinal (#name config))
           (migrations <&> uncurry Client.CodegenPostRequestMigrationsInner)
           (queries <&> uncurry Client.CodegenPostRequestQueriesInner)
   results <- case res of
@@ -48,7 +46,7 @@ generate manager clientConfig outputDir org name migrations queries = do
     Right res -> return res
   forM_ results $ \(Client.CodegenPost200ResponseInner pathText contents) -> do
     path <- parsePath pathText
-    liftIO $ TextIO.writeFile (printCompactAs (outputDir <> path)) contents
+    liftIO $ TextIO.writeFile (printCompactAs (#outputDir config <> path)) contents
 
 parsePath :: Text -> IO Path
 parsePath text =
