@@ -14,7 +14,7 @@ library
   import: language-settings
   hs-source-dirs: library
   exposed-modules:
-    PgenieCli.Client
+    PgenieCli.App
     PgenieCli.Config.Defaults
     PgenieCli.Config.Model
     PgenieCli.Config.Parsing
@@ -26,6 +26,7 @@ library
     domain-aeson,
     domain-optics,
     directory,
+    http-client,
     pgenie-service,
     rerebase,
     text-builder-dev,
