@@ -7,13 +7,13 @@ packages:
 - completed:
     name: pgenie-service
     pantry-tree:
-      sha256: ee61e51f5f6a3892d4394a8c5a36363e0220f6e9cbb12f62e697fc80ddf1437a
+      sha256: 21f3252819d08beca2ccb6fbb01f1b5c41365d2eb85dc3cd4877afed3ee703f5
       size: 1310
-    commit: e436d69d445f3e2cda8b3c3e55e759e8e1a64456
+    commit: 8e1cb3f076cd793b077511bd3a4eecc92b8584ae
     git: https://github.com/pgenie-tech/api-client-v1
     version: 0.1.0.0
   original:
-    commit: e436d69d445f3e2cda8b3c3e55e759e8e1a64456
+    commit: 8e1cb3f076cd793b077511bd3a4eecc92b8584ae
     git: https://github.com/pgenie-tech/api-client-v1
 - completed:
     name: coalmine

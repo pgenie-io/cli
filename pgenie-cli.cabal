@@ -28,6 +28,7 @@ library
     directory,
     http-client,
     http-client-tls,
+    optics,
     pgenie-service,
     rerebase,
     text-builder-dev,

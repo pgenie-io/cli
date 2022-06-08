@@ -1,7 +1,7 @@
 resolver: nightly-2022-06-06
 extra-deps:
   - git: https://github.com/pgenie-tech/api-client-v1
-    commit: e436d69d445f3e2cda8b3c3e55e759e8e1a64456
+    commit: 8e1cb3f076cd793b077511bd3a4eecc92b8584ae
   - git: https://github.com/nikita-volkov/coalmine
     commit: 0e96c36234436c45096a4fa9881137e8a58a50e0
   - git: https://github.com/nikita-volkov/moore-machines

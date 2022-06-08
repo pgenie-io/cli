@@ -2,6 +2,8 @@ module PgenieCli.App (run) where
 
 import qualified Network.HTTP.Client as HttpClient
 import qualified Network.HTTP.Client.TLS as HttpClientTls
+import Optics
+import Optics.State.Operators
 import qualified PgenieCli.Config.Model as Config
 import qualified PgenieCli.Config.Parsing as Parsing
 import PgenieCli.Prelude
@@ -47,9 +49,23 @@ readMigrations :: Process [(Text, Text)]
 readMigrations =
   error "TODO"
 
-publish :: Client.CodegenPostRequest -> Process [Client.CodegenPost200ResponseInner]
-publish req =
-  runClientRequest $ Client.codegenPost req
+publish :: [(Text, Text)] -> [(Text, Text)] -> Process [Client.CodegenPost200ResponseInner]
+publish migrations queries = do
+  org <- gview (_1 % #org)
+  name <- gview (_1 % #name)
+  runClientRequest $ Client.codegenPost (req org name)
+  where
+    req org name =
+      Client.CodegenPostRequest org' name' migrations' queries'
+      where
+        org' =
+          fromNameIn #spinal org
+        name' =
+          fromNameIn #spinal name
+        migrations' =
+          migrations <&> uncurry Client.CodegenPostRequestMigrationsInner
+        queries' =
+          queries <&> uncurry Client.CodegenPostRequestQueriesInner
 
 write :: [Client.CodegenPost200ResponseInner] -> Process ()
 write =
