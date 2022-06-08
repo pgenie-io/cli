@@ -3,6 +3,7 @@ module PgenieCli.Config.Parsing where
 import qualified Coalmine.HappyPathIO as HappyPathIO
 import qualified Data.Attoparsec.Text as Attoparsec
 import qualified Data.ByteString as ByteString
+import qualified PgenieCli.Config.Defaults as Defaults
 import PgenieCli.Config.Model
 import PgenieCli.Prelude
 import YamlUnscrambler
@@ -30,22 +31,18 @@ project =
       Project
         <$> atByKey "org" name
         <*> atByKey "name" name
-        <*> (atByKey "targets" targets <|> pure (Targets True True))
+        <*> atByKey "migrationsDir" path
+        <*> atByKey "queriesDir" path
+        <*> atByKey "outputDir" path
 
 name :: Value Name
 name =
   scalarsValue . pure . stringScalar $
     attoparsedString "Dash-separated name" $
-      (lenientParser <* Attoparsec.endOfInput)
+      lenientParser <* Attoparsec.endOfInput
 
-targets :: Value Targets
-targets =
-  mappingValue $
-    byKeyMapping (CaseSensitive True) $ do
-      javaJdbc <-
-        fmap (fromMaybe False) . optional . atByKey "javaJdbc" $
-          scalarsValue [boolScalar]
-      haskellHasql <-
-        fmap (fromMaybe False) . optional . atByKey "haskellHasql" $
-          scalarsValue [boolScalar]
-      return $ Targets javaJdbc haskellHasql
+path :: Value Path
+path =
+  scalarsValue . pure . stringScalar $
+    attoparsedString "File-path" $
+      lenientParser <* Attoparsec.endOfInput

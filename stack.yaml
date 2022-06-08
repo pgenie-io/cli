@@ -1,9 +1,9 @@
 resolver: nightly-2022-06-06
 extra-deps:
   - git: https://github.com/pgenie-tech/api-client-v1
-    commit: 963e287426dd458542a6961e43b3fdb780a2f9b3
+    commit: e436d69d445f3e2cda8b3c3e55e759e8e1a64456
   - git: https://github.com/nikita-volkov/coalmine
-    commit: 6e866804b94e9a1dfe9f014b61cace334efd0333
+    commit: 0e96c36234436c45096a4fa9881137e8a58a50e0
   - git: https://github.com/nikita-volkov/moore-machines
     commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
   - git: https://github.com/nikita-volkov/isomorphism-class

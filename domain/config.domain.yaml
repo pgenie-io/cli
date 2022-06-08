@@ -1,10 +1,8 @@
+
 Project:
   product:
     org: Name
     name: Name
-    targets: Targets
-
-Targets:
-  product:
-    javaJdbc: Bool
-    haskellHasql: Bool
+    migrationsDir: Path
+    queriesDir: Path
+    outputDir: Path
