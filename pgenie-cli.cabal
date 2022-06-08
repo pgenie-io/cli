@@ -27,6 +27,7 @@ library
     domain-optics,
     directory,
     http-client,
+    http-client-tls,
     pgenie-service,
     rerebase,
     text-builder-dev,
