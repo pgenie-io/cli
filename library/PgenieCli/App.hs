@@ -49,11 +49,11 @@ readMigrations :: Process [(Text, Text)]
 readMigrations =
   error "TODO"
 
-publish :: [(Text, Text)] -> [(Text, Text)] -> Process [Client.CodegenPost200ResponseInner]
-publish migrations queries = do
+generate :: [(Text, Text)] -> [(Text, Text)] -> Process [(Text, Text)]
+generate migrations queries = do
   org <- gview (_1 % #org)
   name <- gview (_1 % #name)
-  runClientRequest $ Client.codegenPost (req org name)
+  fmap res $ runClientRequest $ Client.codegenPost (req org name)
   where
     req org name =
       Client.CodegenPostRequest org' name' migrations' queries'
@@ -66,7 +66,14 @@ publish migrations queries = do
           migrations <&> uncurry Client.CodegenPostRequestMigrationsInner
         queries' =
           queries <&> uncurry Client.CodegenPostRequestQueriesInner
+    res =
+      fmap $ \(Client.CodegenPost200ResponseInner path contents) ->
+        (path, contents)
 
-write :: [Client.CodegenPost200ResponseInner] -> Process ()
+parsePath :: Text -> Process Path
+parsePath =
+  error "TODO"
+
+write :: [(Path, Text)] -> Process ()
 write =
   error "TODO"
