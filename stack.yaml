@@ -3,7 +3,7 @@ extra-deps:
   - git: https://github.com/pgenie-tech/api-client-v1
     commit: 8e1cb3f076cd793b077511bd3a4eecc92b8584ae
   - git: https://github.com/nikita-volkov/coalmine
-    commit: 0e96c36234436c45096a4fa9881137e8a58a50e0
+    commit: 6603a7813e7504a9a54f47e6c9ddb1da93475599
   - git: https://github.com/nikita-volkov/moore-machines
     commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
   - git: https://github.com/nikita-volkov/isomorphism-class

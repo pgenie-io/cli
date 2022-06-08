@@ -1,5 +1,6 @@
-module PgenieCli.App (run) where
+module PgenieCli.App (main) where
 
+import qualified Data.Text.IO as TextIO
 import qualified Network.HTTP.Client as HttpClient
 import qualified Network.HTTP.Client.TLS as HttpClientTls
 import Optics
@@ -9,10 +10,12 @@ import qualified PgenieCli.Config.Parsing as Parsing
 import PgenieCli.Prelude
 import qualified PgenieService as Client
 
-run :: IO ()
-run = runProcess $ do
+main :: IO ()
+main = runProcess $ do
   migrations <- readMigrations
-  error "TODO"
+  queries <- readQueries
+  response <- generate migrations queries
+  handleResponse response
 
 runProcess :: Process a -> IO a
 runProcess process = do
@@ -49,11 +52,15 @@ readMigrations :: Process [(Text, Text)]
 readMigrations =
   error "TODO"
 
-generate :: [(Text, Text)] -> [(Text, Text)] -> Process [(Text, Text)]
+readQueries :: Process [(Text, Text)]
+readQueries =
+  error "TODO"
+
+generate :: [(Text, Text)] -> [(Text, Text)] -> Process [Client.CodegenPost200ResponseInner]
 generate migrations queries = do
   org <- gview (_1 % #org)
   name <- gview (_1 % #name)
-  fmap res $ runClientRequest $ Client.codegenPost (req org name)
+  runClientRequest $ Client.codegenPost (req org name)
   where
     req org name =
       Client.CodegenPostRequest org' name' migrations' queries'
@@ -66,14 +73,14 @@ generate migrations queries = do
           migrations <&> uncurry Client.CodegenPostRequestMigrationsInner
         queries' =
           queries <&> uncurry Client.CodegenPostRequestQueriesInner
-    res =
-      fmap $ \(Client.CodegenPost200ResponseInner path contents) ->
-        (path, contents)
+
+handleResponse :: [Client.CodegenPost200ResponseInner] -> Process ()
+handleResponse results = do
+  outputDir <- gview (_1 % #outputDir)
+  forM_ results $ \(Client.CodegenPost200ResponseInner pathText contents) -> do
+    path <- parsePath pathText
+    liftIO $ TextIO.writeFile (printCompactAs (outputDir <> path)) contents
 
 parsePath :: Text -> Process Path
 parsePath =
-  error "TODO"
-
-write :: [(Path, Text)] -> Process ()
-write =
   error "TODO"

@@ -1,7 +1,5 @@
 module Main where
 
-import Coalmine.Prelude
-import Coalmine.Tasty
+import qualified PgenieCli.App as App
 
-main =
-  error "TODO"
+main = App.main
