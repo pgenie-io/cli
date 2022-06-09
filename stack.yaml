@@ -1,7 +1,7 @@
-resolver: nightly-2022-06-06
+resolver: nightly-2022-06-08
 extra-deps:
-  - git: https://github.com/pgenie-tech/api-client-v1
-    commit: 8e1cb3f076cd793b077511bd3a4eecc92b8584ae
+  - git: https://github.com/pgenie-tech/protocol
+    commit: 93d419d1c5b99719599e891fe63cef1fa3691693
   - git: https://github.com/nikita-volkov/coalmine
     commit: 222f75e078b1b2a8a1a3955ec7f9547d862d86f2
   - git: https://github.com/nikita-volkov/moore-machines
@@ -10,11 +10,16 @@ extra-deps:
     commit: 6030243b4e2c28ab3c010b5f06cb6514d70f9c35
   - git: https://github.com/nikita-volkov/structure-kit
     commit: 25191e675725457c36b643fee52f40fdd72e2533
-  - aeson-value-parser-0.19.6
+  - aeson-value-parser-0.19.7
   - cereal-unordered-containers-0.1
   - cereal-data-dword-0.1.1
   - domain-aeson-0.1
   - domain-cereal-0.1
+  - punycode-2.0
   - timestamp-0.2
   - leb128-cereal-1.2
   - vector-extras-0.2.7
+  - git: https://github.com/nikita-volkov/lean-http-client
+    commit: 83169f3fd08b59c8b91450bae1dce4fbaa961289
+  - git: https://github.com/nikita-volkov/distillery
+    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
