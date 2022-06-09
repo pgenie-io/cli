@@ -20,6 +20,6 @@ extra-deps:
   - leb128-cereal-1.2
   - vector-extras-0.2.7
   - git: https://github.com/nikita-volkov/lean-http-client
-    commit: 83169f3fd08b59c8b91450bae1dce4fbaa961289
+    commit: 502f4fc0d45d55fe502c9ac5122875137791986e
   - git: https://github.com/nikita-volkov/distillery
     commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a

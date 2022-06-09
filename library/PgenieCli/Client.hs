@@ -11,10 +11,12 @@ module PgenieCli.Client
     operateGlobally,
 
     -- * Operations
+    process,
   )
 where
 
 import qualified Coalmine.EvenSimplerPaths as Path
+import qualified Data.Serialize as Cereal
 import qualified Data.Text.IO as TextIO
 import qualified LeanHttpClient as Lhc
 import qualified Network.HTTP.Client as HttpClient
@@ -53,13 +55,17 @@ executeRequest req =
     "/api/v1"
     []
     mempty
-    (error "TODO: serialize")
-    (error "TODO: parse")
+    requestBody
+    parser
   where
     timeout = 15
     maxRedirects = 3
     secure = True
     host = "pgenie.tech"
+    requestBody =
+      Cereal.encode req
+    parser =
+      Lhc.deserializeBodyWithCereal Cereal.get
 
 process :: Name -> Name -> [(Path, Text)] -> [(Path, Text)] -> Op (Either Text [(Path, Text)])
 process org name migrations queries = do
