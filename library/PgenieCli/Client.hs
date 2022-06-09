@@ -36,7 +36,7 @@ operate =
 -- | Execute operation on global manager.
 operateGlobally :: Op a -> IO (Either Lhc.Err a)
 operateGlobally =
-  error "TODO"
+  Lhc.runSessionOnGlobalManager
 
 type Rsc = HttpClient.Manager
 
