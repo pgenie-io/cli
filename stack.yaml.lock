@@ -5,26 +5,26 @@
 
 packages:
 - completed:
-    name: pgenie-service
+    name: pgenie-protocol
     pantry-tree:
-      sha256: 21f3252819d08beca2ccb6fbb01f1b5c41365d2eb85dc3cd4877afed3ee703f5
-      size: 1310
-    commit: 8e1cb3f076cd793b077511bd3a4eecc92b8584ae
-    git: https://github.com/pgenie-tech/api-client-v1
-    version: 0.1.0.0
+      sha256: ff87358ad00a9f1943fb434525d2bf2bfe38f204a0b618bf6f35fd3529d10e0f
+      size: 425
+    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
+    git: https://github.com/pgenie-tech/protocol
+    version: '0.1'
   original:
-    commit: 8e1cb3f076cd793b077511bd3a4eecc92b8584ae
-    git: https://github.com/pgenie-tech/api-client-v1
+    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
+    git: https://github.com/pgenie-tech/protocol
 - completed:
     name: coalmine
     pantry-tree:
-      sha256: fcba06b2974b4abe9ea87ce4957fb18dfce17175f6ed02103c244006a9b2adcb
-      size: 8008
-    commit: 222f75e078b1b2a8a1a3955ec7f9547d862d86f2
+      sha256: 557687db621fc9ff04575cfbbef08e2dde73b3ba82d81b64cc9435a930b14d95
+      size: 8454
+    commit: 48e79f118186b297585e7f6075270a754979e255
     git: https://github.com/nikita-volkov/coalmine
     version: '0.1'
   original:
-    commit: 222f75e078b1b2a8a1a3955ec7f9547d862d86f2
+    commit: 48e79f118186b297585e7f6075270a754979e255
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines
@@ -51,21 +51,21 @@ packages:
 - completed:
     name: structure-kit
     pantry-tree:
-      sha256: 0f0097bfbca861b0e3a1cf8e39811e59fa608614f7b723a9bd5d6ff736b49a49
+      sha256: c64047580ccc550a98e97c8ceea649b1a60b4565f370043fc01a13e5ad4e2abb
       size: 3500
-    commit: 25191e675725457c36b643fee52f40fdd72e2533
+    commit: 807f9b40e15d2624f8a679c35a978c2b21a36bfe
     git: https://github.com/nikita-volkov/structure-kit
-    version: '0.1'
+    version: 0.1.0.1
   original:
-    commit: 25191e675725457c36b643fee52f40fdd72e2533
+    commit: 807f9b40e15d2624f8a679c35a978c2b21a36bfe
     git: https://github.com/nikita-volkov/structure-kit
 - completed:
     pantry-tree:
-      sha256: a2fa5c7577470e6472dcc9f9c3826486bfabce337149555a5297c11807bfe993
-      size: 454
-    hackage: aeson-value-parser-0.19.6@sha256:ccd8424b17fd5608c3f1f7e51c7d4b77ff64cd409b51387759d27fc0e6e419bc,2054
+      sha256: 4c700792b51236a70e364ac79c1cd0d197596264c0f57099eb5cea193b663c1b
+      size: 408
+    hackage: aeson-value-parser-0.19.7@sha256:c114ae7deb86b55154a408896602f9ce61555ac6fd044e8e209c9c544ad2f4db,2054
   original:
-    hackage: aeson-value-parser-0.19.6
+    hackage: aeson-value-parser-0.19.7
 - completed:
     pantry-tree:
       sha256: 1240e61d89fa70c65636995919674b5bc55bc33a719e555fa4ec8950a91eb6e5
@@ -96,6 +96,13 @@ packages:
     hackage: domain-cereal-0.1
 - completed:
     pantry-tree:
+      sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
+      size: 473
+    hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
+  original:
+    hackage: punycode-2.0
+- completed:
+    pantry-tree:
       sha256: 51dc0ab22269973eec829ae476fb3102cfe155ffde2fd1d039dedf65c7842031
       size: 509
     hackage: timestamp-0.2@sha256:103fe49ce206922d3b14d57d8aff25eaf03c70fef5fcdaeaeb8416aaee163e51,1598
@@ -115,9 +122,31 @@ packages:
     hackage: vector-extras-0.2.7@sha256:0bb96549e289f6cc7ba7afb3f985af39611f1f5966bce8e036419eb9a1174848,1915
   original:
     hackage: vector-extras-0.2.7
+- completed:
+    name: lean-http-client
+    pantry-tree:
+      sha256: 0158cb075ad5c0d57b3cf7fa8fc4198b1c7abf89aec9404d59bb54fd23837d57
+      size: 544
+    commit: 502f4fc0d45d55fe502c9ac5122875137791986e
+    git: https://github.com/nikita-volkov/lean-http-client
+    version: '0.1'
+  original:
+    commit: 502f4fc0d45d55fe502c9ac5122875137791986e
+    git: https://github.com/nikita-volkov/lean-http-client
+- completed:
+    name: distillery
+    pantry-tree:
+      sha256: 03d32965a35914b68bdaa149db48ce66e774783360f5b7d8b18db72de61b7baf
+      size: 524
+    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
+    git: https://github.com/nikita-volkov/distillery
+    version: '0.1'
+  original:
+    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
+    git: https://github.com/nikita-volkov/distillery
 snapshots:
 - completed:
-    sha256: 26ea900ee8601fee24ff84981e92f304d384c73ee32d5504299133b5eb177e87
-    size: 605110
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/6/6.yaml
-  original: nightly-2022-06-06
+    sha256: 869e23c4f7367895ae63b129255b70bc8b4b965229aa258f6c50141c6b10ae76
+    size: 607265
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/6/8.yaml
+  original: nightly-2022-06-08

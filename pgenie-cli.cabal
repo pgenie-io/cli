@@ -15,12 +15,14 @@ library
   hs-source-dirs: library
   exposed-modules:
     PgenieCli.App
+    PgenieCli.Client
     PgenieCli.Config.Defaults
     PgenieCli.Config.Model
     PgenieCli.Config.Parsing
     PgenieCli.Prelude
   build-depends:
     attoparsec,
+    cereal,
     coalmine,
     domain,
     domain-aeson,
@@ -28,7 +30,8 @@ library
     directory,
     http-client,
     http-client-tls,
-    pgenie-service,
+    lean-http-client,
+    pgenie-protocol,
     rerebase,
     text-builder-dev,
     yaml-unscrambler,
