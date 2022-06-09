@@ -7,13 +7,13 @@ packages:
 - completed:
     name: pgenie-protocol
     pantry-tree:
-      sha256: eebfd5bb3cc481ef66c3bcd73788192ba02b80bd2bfeacef825e3f5a65f7c0fe
-      size: 428
-    commit: b75436db86b136d5d1639e93dd662cf89be0d477
+      sha256: ff87358ad00a9f1943fb434525d2bf2bfe38f204a0b618bf6f35fd3529d10e0f
+      size: 425
+    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
     git: https://github.com/pgenie-tech/protocol
     version: '0.1'
   original:
-    commit: b75436db86b136d5d1639e93dd662cf89be0d477
+    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
     git: https://github.com/pgenie-tech/protocol
 - completed:
     name: coalmine

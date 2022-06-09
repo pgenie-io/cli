@@ -1,7 +1,7 @@
 resolver: nightly-2022-06-08
 extra-deps:
   - git: https://github.com/pgenie-tech/protocol
-    commit: b75436db86b136d5d1639e93dd662cf89be0d477
+    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
   - git: https://github.com/nikita-volkov/coalmine
     commit: 48e79f118186b297585e7f6075270a754979e255
   - git: https://github.com/nikita-volkov/moore-machines
