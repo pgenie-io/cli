@@ -1,5 +1,6 @@
 module PgenieCli.App (main) where
 
+import qualified Coalmine.EvenSimplerPaths as Path
 import qualified Data.Text.IO as TextIO
 import qualified Network.HTTP.Client as HttpClient
 import qualified Network.HTTP.Client.TLS as HttpClientTls
@@ -7,23 +8,29 @@ import qualified PgenieCli.Config.Model as Config
 import qualified PgenieCli.Config.Parsing as Parsing
 import PgenieCli.Prelude
 import qualified PgenieService as Client
+import qualified System.Directory as Directory
 
 main :: IO ()
 main = do
   config <- Parsing.fileInDir mempty
   clientConfig <- Client.newConfig
   manager <- HttpClientTls.newTlsManager
-  migrations <- readMigrations (#migrationsDir config)
-  queries <- readQueries (#queriesDir config)
+  migrations <- loadSqlFiles (#migrationsDir config)
+  queries <- loadSqlFiles (#queriesDir config)
   generate config manager clientConfig migrations queries
 
-readMigrations :: Path -> IO [(Text, Text)]
-readMigrations =
-  error "TODO"
-
-readQueries :: Path -> IO [(Text, Text)]
-readQueries =
-  error "TODO"
+loadSqlFiles :: Path -> IO [(Text, Text)]
+loadSqlFiles dir =
+  Path.listDirectory dir >>= traverse load . sort . filter pred
+  where
+    pred path =
+      case Path.extensions path of
+        ["sql"] -> True
+        ["psql"] -> True
+        _ -> False
+    load path =
+      TextIO.readFile (printCompactAs path)
+        <&> (printCompactAs path,)
 
 generate ::
   Config.Project ->
