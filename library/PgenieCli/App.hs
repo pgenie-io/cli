@@ -15,7 +15,7 @@ main = do
   queries <- loadSqlFiles (#queriesDir config)
   generate config migrations queries
 
-loadSqlFiles :: Path -> IO [(Text, Text)]
+loadSqlFiles :: Path -> IO [(Path, Text)]
 loadSqlFiles dir =
   Path.listDirectory dir >>= traverse load . sort . filter pred
   where
@@ -26,24 +26,21 @@ loadSqlFiles dir =
         _ -> False
     load path =
       TextIO.readFile (printCompactAs path)
-        <&> (printCompactAs path,)
+        <&> (path,)
 
 generate ::
   Config.Project ->
-  [(Text, Text)] ->
-  [(Text, Text)] ->
+  [(Path, Text)] ->
+  [(Path, Text)] ->
   IO ()
 generate config migrations queries = do
   res <-
     Client.operateGlobally $
-      error "TODO"
+      Client.process (#org config) (#name config) migrations queries
   results <- case res of
     Left err -> die (to (show err))
-    Right res -> return res
-  error "TODO"
-
-parsePath :: Text -> IO Path
-parsePath text =
-  case parseTextLeniently text of
-    Right path -> return path
-    Left err -> die (to err)
+    Right res -> case res of
+      Left err -> die (to err)
+      Right res -> return res
+  forM_ results $ \(path, contents) -> do
+    liftIO $ TextIO.writeFile (printCompactAs (#outputDir config <> path)) contents
