@@ -125,13 +125,13 @@ packages:
 - completed:
     name: lean-http-client
     pantry-tree:
-      sha256: 0158cb075ad5c0d57b3cf7fa8fc4198b1c7abf89aec9404d59bb54fd23837d57
+      sha256: a9e30ed1164be08a8582dfefcbdfe8d4797cd2c88d5bd5fb09cd90cfcf47e8f9
       size: 544
-    commit: 502f4fc0d45d55fe502c9ac5122875137791986e
+    commit: c497f30d2dca77f42ab42929ad3854950ce153a0
     git: https://github.com/nikita-volkov/lean-http-client
     version: '0.1'
   original:
-    commit: 502f4fc0d45d55fe502c9ac5122875137791986e
+    commit: c497f30d2dca77f42ab42929ad3854950ce153a0
     git: https://github.com/nikita-volkov/lean-http-client
 - completed:
     name: distillery

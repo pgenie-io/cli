@@ -46,22 +46,18 @@ type Op = Lhc.Session
 
 executeRequest :: Protocol.Request -> Op Protocol.Response
 executeRequest req =
-  Lhc.performPost
-    timeout
-    maxRedirects
-    secure
-    host
-    Nothing
-    "/api/v1"
-    []
-    mempty
-    requestBody
-    parser
+  Lhc.post url headers requestBody parser
   where
-    timeout = 15
-    maxRedirects = 3
-    secure = True
-    host = "pgenie.tech"
+    url =
+      Lhc.url https host port path query
+      where
+        https = True
+        host = "pgenie.tech"
+        port = Nothing
+        path = "/api/v1"
+        query = []
+    headers =
+      mempty
     requestBody =
       Cereal.encode req
     parser =
