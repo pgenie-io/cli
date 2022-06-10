@@ -31,9 +31,9 @@ project =
       Project
         <$> atByKey "org" name
         <*> atByKey "name" name
-        <*> atByKey "migrationsDir" path
-        <*> atByKey "queriesDir" path
-        <*> atByKey "outputDir" path
+        <*> (atByKey "migrationsDir" path <|> pure Defaults.migrationsDir)
+        <*> (atByKey "queriesDir" path <|> pure Defaults.queriesDir)
+        <*> (atByKey "outputDir" path <|> pure Defaults.outputDir)
 
 name :: Value Name
 name =

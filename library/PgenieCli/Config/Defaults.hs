@@ -8,3 +8,6 @@ migrationsDir = "migrations"
 
 queriesDir :: Path
 queriesDir = "queries"
+
+outputDir :: Path
+outputDir = "output"
