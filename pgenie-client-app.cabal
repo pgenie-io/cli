@@ -14,7 +14,7 @@ library
   import: language-settings
   hs-source-dirs: library
   exposed-modules:
-    Pgenie.ClientApp.App
+    Pgenie.ClientApp
     Pgenie.ClientApp.Client
     Pgenie.ClientApp.Config.Defaults
     Pgenie.ClientApp.Config.Model

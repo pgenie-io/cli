@@ -1,4 +1,4 @@
-module Pgenie.ClientApp.App (main) where
+module Pgenie.ClientApp (main) where
 
 import qualified Coalmine.EvenSimplerPaths as Path
 import qualified Data.Text.IO as TextIO
