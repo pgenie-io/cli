@@ -5,26 +5,15 @@
 
 packages:
 - completed:
-    name: pgenie-protocol
-    pantry-tree:
-      sha256: ff87358ad00a9f1943fb434525d2bf2bfe38f204a0b618bf6f35fd3529d10e0f
-      size: 425
-    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
-    git: https://github.com/pgenie-tech/protocol
-    version: '0.1'
-  original:
-    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
-    git: https://github.com/pgenie-tech/protocol
-- completed:
     name: coalmine
     pantry-tree:
-      sha256: 557687db621fc9ff04575cfbbef08e2dde73b3ba82d81b64cc9435a930b14d95
-      size: 8454
-    commit: 48e79f118186b297585e7f6075270a754979e255
+      sha256: 7183a48e581eed8d123577f1345247b253da740548b822f7988dd13c0ca8a2e2
+      size: 9575
+    commit: 0401b36ef76dcfd519d2994278340b2b69df26d3
     git: https://github.com/nikita-volkov/coalmine
     version: '0.1'
   original:
-    commit: 48e79f118186b297585e7f6075270a754979e255
+    commit: 0401b36ef76dcfd519d2994278340b2b69df26d3
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines
@@ -40,24 +29,24 @@ packages:
 - completed:
     name: isomorphism-class
     pantry-tree:
-      sha256: 772cd5d9a535ac383d82984a03c706a32d9f0edb20829cdadd5b116efccd3a24
-      size: 608
-    commit: 6030243b4e2c28ab3c010b5f06cb6514d70f9c35
+      sha256: e15893487ac37aa96b0c77a71660c9e3c402459bbb6bf1f9e4f60615f0fb7496
+      size: 692
+    commit: e66a02cef13eb3801e202667de4279cb3a591be0
     git: https://github.com/nikita-volkov/isomorphism-class
     version: '0.1'
   original:
-    commit: 6030243b4e2c28ab3c010b5f06cb6514d70f9c35
+    commit: e66a02cef13eb3801e202667de4279cb3a591be0
     git: https://github.com/nikita-volkov/isomorphism-class
 - completed:
     name: structure-kit
     pantry-tree:
-      sha256: c64047580ccc550a98e97c8ceea649b1a60b4565f370043fc01a13e5ad4e2abb
+      sha256: b7779ebe935d65c0b4f6e3ea8b5f5011abdabf362b1673826545c93625e050ad
       size: 3500
-    commit: 807f9b40e15d2624f8a679c35a978c2b21a36bfe
+    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
     git: https://github.com/nikita-volkov/structure-kit
     version: 0.1.0.1
   original:
-    commit: 807f9b40e15d2624f8a679c35a978c2b21a36bfe
+    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
     git: https://github.com/nikita-volkov/structure-kit
 - completed:
     pantry-tree:
@@ -125,13 +114,13 @@ packages:
 - completed:
     name: lean-http-client
     pantry-tree:
-      sha256: a9e30ed1164be08a8582dfefcbdfe8d4797cd2c88d5bd5fb09cd90cfcf47e8f9
+      sha256: 7a2401e0f6bc1f71fea5ddcdca8e0ea98f999b6c0bcc63ac54324c0b2e0682db
       size: 544
-    commit: c497f30d2dca77f42ab42929ad3854950ce153a0
+    commit: 5049bd8c56bcc1473d65ccf351f7979772d478b3
     git: https://github.com/nikita-volkov/lean-http-client
     version: '0.1'
   original:
-    commit: c497f30d2dca77f42ab42929ad3854950ce153a0
+    commit: 5049bd8c56bcc1473d65ccf351f7979772d478b3
     git: https://github.com/nikita-volkov/lean-http-client
 - completed:
     name: distillery
@@ -144,6 +133,28 @@ packages:
   original:
     commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
     git: https://github.com/nikita-volkov/distillery
+- completed:
+    name: pgenie-protocol
+    pantry-tree:
+      sha256: bf7f1f0db9fd1230502477e519152189ebfe9d2ad556bdea6cf006cc1acf3776
+      size: 551
+    commit: 8a8890b32d191cf2332e401bd68b7dff6f3ee82e
+    git: https://github.com/pgenie-tech/protocol
+    version: '0.1'
+  original:
+    commit: 8a8890b32d191cf2332e401bd68b7dff6f3ee82e
+    git: https://github.com/pgenie-tech/protocol
+- completed:
+    name: pgenie-client
+    pantry-tree:
+      sha256: 2359a388fca78b71558fcfe6c0ea634db9fdf91ed35c9bf09a8366265faa102e
+      size: 360
+    commit: 1fedb6583e498bc9ef7f77573786691bad228e05
+    git: https://github.com/pgenie-tech/client
+    version: '0.1'
+  original:
+    commit: 1fedb6583e498bc9ef7f77573786691bad228e05
+    git: https://github.com/pgenie-tech/client
 snapshots:
 - completed:
     sha256: 869e23c4f7367895ae63b129255b70bc8b4b965229aa258f6c50141c6b10ae76

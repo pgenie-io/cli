@@ -1,15 +1,13 @@
 resolver: nightly-2022-06-08
 extra-deps:
-  - git: https://github.com/pgenie-tech/protocol
-    commit: 4af579cd68f989062f4b23b2cce9d43c67a4b603
   - git: https://github.com/nikita-volkov/coalmine
-    commit: 48e79f118186b297585e7f6075270a754979e255
+    commit: 0401b36ef76dcfd519d2994278340b2b69df26d3
   - git: https://github.com/nikita-volkov/moore-machines
     commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
   - git: https://github.com/nikita-volkov/isomorphism-class
-    commit: 6030243b4e2c28ab3c010b5f06cb6514d70f9c35
+    commit: e66a02cef13eb3801e202667de4279cb3a591be0
   - git: https://github.com/nikita-volkov/structure-kit
-    commit: 807f9b40e15d2624f8a679c35a978c2b21a36bfe
+    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
   - aeson-value-parser-0.19.7
   - cereal-unordered-containers-0.1
   - cereal-data-dword-0.1.1
@@ -20,6 +18,10 @@ extra-deps:
   - leb128-cereal-1.2
   - vector-extras-0.2.7
   - git: https://github.com/nikita-volkov/lean-http-client
-    commit: c497f30d2dca77f42ab42929ad3854950ce153a0
+    commit: 5049bd8c56bcc1473d65ccf351f7979772d478b3
   - git: https://github.com/nikita-volkov/distillery
     commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
+  - git: https://github.com/pgenie-tech/protocol
+    commit: 8a8890b32d191cf2332e401bd68b7dff6f3ee82e
+  - git: https://github.com/pgenie-tech/client
+    commit: 1fedb6583e498bc9ef7f77573786691bad228e05
