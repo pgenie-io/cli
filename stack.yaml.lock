@@ -136,13 +136,13 @@ packages:
 - completed:
     name: pgenie-protocol
     pantry-tree:
-      sha256: bf7f1f0db9fd1230502477e519152189ebfe9d2ad556bdea6cf006cc1acf3776
-      size: 551
-    commit: 8a8890b32d191cf2332e401bd68b7dff6f3ee82e
+      sha256: b94c6131994a9d0cb1aa6ac18c269239b9ad2d4206f05f92eff86fd9b4ed80e5
+      size: 552
+    commit: 3cc38a8222ce99337953c68e6a60a938459bc567
     git: https://github.com/pgenie-tech/protocol
     version: '0.1'
   original:
-    commit: 8a8890b32d191cf2332e401bd68b7dff6f3ee82e
+    commit: 3cc38a8222ce99337953c68e6a60a938459bc567
     git: https://github.com/pgenie-tech/protocol
 - completed:
     name: pgenie-client

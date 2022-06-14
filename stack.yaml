@@ -22,6 +22,6 @@ extra-deps:
   - git: https://github.com/nikita-volkov/distillery
     commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
   - git: https://github.com/pgenie-tech/protocol
-    commit: 8a8890b32d191cf2332e401bd68b7dff6f3ee82e
+    commit: 3cc38a8222ce99337953c68e6a60a938459bc567
   - git: https://github.com/pgenie-tech/client
     commit: 28b0597de913510c52c326898f3846d8536d3380
