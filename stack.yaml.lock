@@ -7,13 +7,13 @@ packages:
 - completed:
     name: coalmine
     pantry-tree:
-      sha256: 7183a48e581eed8d123577f1345247b253da740548b822f7988dd13c0ca8a2e2
+      sha256: a02ff669dc94d43795a6ac0e3a0bb9afa19bfa6f37528cd1fa933f0bb7378819
       size: 9575
-    commit: 0401b36ef76dcfd519d2994278340b2b69df26d3
+    commit: c714fabbcfcaa78dbc6fe314379a1b87c5f7edb3
     git: https://github.com/nikita-volkov/coalmine
     version: '0.1'
   original:
-    commit: 0401b36ef76dcfd519d2994278340b2b69df26d3
+    commit: c714fabbcfcaa78dbc6fe314379a1b87c5f7edb3
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines

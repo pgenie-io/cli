@@ -1,7 +1,7 @@
 resolver: nightly-2022-06-08
 extra-deps:
   - git: https://github.com/nikita-volkov/coalmine
-    commit: 0401b36ef76dcfd519d2994278340b2b69df26d3
+    commit: c714fabbcfcaa78dbc6fe314379a1b87c5f7edb3
   - git: https://github.com/nikita-volkov/moore-machines
     commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
   - git: https://github.com/nikita-volkov/isomorphism-class
