@@ -155,6 +155,17 @@ packages:
   original:
     commit: 28b0597de913510c52c326898f3846d8536d3380
     git: https://github.com/pgenie-tech/client
+- completed:
+    name: pgenie-config
+    pantry-tree:
+      sha256: ebb1b3e35470dd937938f17961127e024521b9f2536406829fa011a2cf209a2e
+      size: 575
+    commit: 06f92c7f57e1057dcf464ea8fe4794506da4ae29
+    git: https://github.com/pgenie-tech/config
+    version: '0.1'
+  original:
+    commit: 06f92c7f57e1057dcf464ea8fe4794506da4ae29
+    git: https://github.com/pgenie-tech/config
 snapshots:
 - completed:
     sha256: 869e23c4f7367895ae63b129255b70bc8b4b965229aa258f6c50141c6b10ae76

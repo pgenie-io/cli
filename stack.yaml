@@ -25,3 +25,5 @@ extra-deps:
     commit: 3cc38a8222ce99337953c68e6a60a938459bc567
   - git: https://github.com/pgenie-tech/client
     commit: 28b0597de913510c52c326898f3846d8536d3380
+  - git: https://github.com/pgenie-tech/config
+    commit: 06f92c7f57e1057dcf464ea8fe4794506da4ae29

@@ -3,9 +3,9 @@ module Pgenie.ClientApp (main) where
 import qualified Coalmine.EvenSimplerPaths as Path
 import qualified Data.Text.IO as TextIO
 import qualified Pgenie.Client as Client
-import qualified Pgenie.ClientApp.Config.Model as Config
-import qualified Pgenie.ClientApp.Config.Parsing as Parsing
 import Pgenie.ClientApp.Prelude
+import qualified Pgenie.Config.Model as Config
+import qualified Pgenie.Config.Parsing as Parsing
 import qualified System.Directory as Directory
 
 main ::

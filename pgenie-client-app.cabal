@@ -2,9 +2,6 @@ cabal-version: 3.0
 
 name: pgenie-client-app
 version: 0.1
-build-type: Simple
-extra-source-files:
-  domain/*.domain.yaml
 
 common language-settings
   default-extensions: ApplicativeDo, Arrows, BangPatterns, BinaryLiterals, BlockArguments, ConstraintKinds, DataKinds, DefaultSignatures, DeriveDataTypeable, DeriveFoldable, DeriveFunctor, DeriveGeneric, DeriveTraversable, DerivingVia, DuplicateRecordFields, EmptyCase, EmptyDataDecls, FlexibleContexts, FlexibleInstances, FunctionalDependencies, GADTs, GeneralizedNewtypeDeriving, HexFloatLiterals, LambdaCase, LiberalTypeSynonyms, MultiParamTypeClasses, MultiWayIf, NoImplicitPrelude, NoMonomorphismRestriction, NumericUnderscores, OverloadedLabels, OverloadedStrings, PatternGuards, PatternSynonyms, ParallelListComp, QuasiQuotes, RankNTypes, RecordWildCards, ScopedTypeVariables, StandaloneDeriving, StrictData, TemplateHaskell, TupleSections, TypeApplications, TypeFamilies, TypeOperators, UndecidableInstances, ViewPatterns
@@ -16,9 +13,6 @@ library
   exposed-modules:
     Pgenie.ClientApp
   other-modules:
-    Pgenie.ClientApp.Config.Defaults
-    Pgenie.ClientApp.Config.Model
-    Pgenie.ClientApp.Config.Parsing
     Pgenie.ClientApp.Prelude
   build-depends:
     attoparsec,
@@ -32,6 +26,7 @@ library
     http-client-tls,
     lean-http-client,
     pgenie-client,
+    pgenie-config,
     pgenie-protocol,
     rerebase,
     text-builder-dev,

@@ -1,8 +1,0 @@
-
-Project:
-  product:
-    org: Name
-    name: Name
-    migrationsDir: Path
-    queriesDir: Path
-    outputDir: Path
