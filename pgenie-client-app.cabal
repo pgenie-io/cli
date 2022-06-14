@@ -15,6 +15,7 @@ library
   hs-source-dirs: library
   exposed-modules:
     Pgenie.ClientApp
+  other-modules:
     Pgenie.ClientApp.Config.Defaults
     Pgenie.ClientApp.Config.Model
     Pgenie.ClientApp.Config.Parsing
