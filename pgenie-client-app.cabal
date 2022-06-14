@@ -56,3 +56,16 @@ executable pgn
     optima,
     pgenie-client-app,
     rerebase,
+
+-- Development version.
+-- Assumes you have a valid HTTP server running locally
+-- at port 27400.
+executable pgn-dev
+  import: language-settings
+  hs-source-dirs: pgn-dev
+  main-is: Main.hs
+  build-depends:
+    coalmine,
+    optima,
+    pgenie-client-app,
+    rerebase,
