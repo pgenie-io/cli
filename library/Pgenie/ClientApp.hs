@@ -48,7 +48,9 @@ generate secure host port config migrations queries = do
       Left err -> die (to err)
       Right res -> return res
   forM_ results $ \(path, contents) -> do
-    liftIO $ TextIO.writeFile (printCompactAs (#outputDir config <> path)) contents
+    let path' = #outputDir config <> path
+    Path.createDirsTo path'
+    liftIO $ TextIO.writeFile (printCompactAs path') contents
   where
     op =
       Client.process (#org config) (#name config) migrations queries
