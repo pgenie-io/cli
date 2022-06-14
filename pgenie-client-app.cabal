@@ -15,7 +15,6 @@ library
   hs-source-dirs: library
   exposed-modules:
     Pgenie.ClientApp
-    Pgenie.ClientApp.Client
     Pgenie.ClientApp.Config.Defaults
     Pgenie.ClientApp.Config.Model
     Pgenie.ClientApp.Config.Parsing
@@ -31,6 +30,7 @@ library
     http-client,
     http-client-tls,
     lean-http-client,
+    pgenie-client,
     pgenie-protocol,
     rerebase,
     text-builder-dev,

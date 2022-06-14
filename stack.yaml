@@ -24,4 +24,4 @@ extra-deps:
   - git: https://github.com/pgenie-tech/protocol
     commit: 8a8890b32d191cf2332e401bd68b7dff6f3ee82e
   - git: https://github.com/pgenie-tech/client
-    commit: 1fedb6583e498bc9ef7f77573786691bad228e05
+    commit: 28b0597de913510c52c326898f3846d8536d3380
