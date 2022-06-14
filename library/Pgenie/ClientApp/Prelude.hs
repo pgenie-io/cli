@@ -1,4 +1,4 @@
-module PgenieCli.Prelude
+module Pgenie.ClientApp.Prelude
   ( module Exports,
   )
 where

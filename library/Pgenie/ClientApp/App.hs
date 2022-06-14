@@ -1,11 +1,11 @@
-module PgenieCli.App (main) where
+module Pgenie.ClientApp.App (main) where
 
 import qualified Coalmine.EvenSimplerPaths as Path
 import qualified Data.Text.IO as TextIO
-import qualified PgenieCli.Client as Client
-import qualified PgenieCli.Config.Model as Config
-import qualified PgenieCli.Config.Parsing as Parsing
-import PgenieCli.Prelude
+import qualified Pgenie.ClientApp.Client as Client
+import qualified Pgenie.ClientApp.Config.Model as Config
+import qualified Pgenie.ClientApp.Config.Parsing as Parsing
+import Pgenie.ClientApp.Prelude
 import qualified System.Directory as Directory
 
 main :: IO ()

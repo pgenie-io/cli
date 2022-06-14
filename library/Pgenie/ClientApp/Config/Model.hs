@@ -1,9 +1,9 @@
-module PgenieCli.Config.Model where
+module Pgenie.ClientApp.Config.Model where
 
 import qualified Domain
 import qualified DomainAeson
 import qualified DomainOptics
-import PgenieCli.Prelude
+import Pgenie.ClientApp.Prelude
 
 Domain.declare
   Nothing

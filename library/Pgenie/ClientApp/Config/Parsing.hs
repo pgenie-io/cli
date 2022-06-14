@@ -1,11 +1,11 @@
-module PgenieCli.Config.Parsing where
+module Pgenie.ClientApp.Config.Parsing where
 
 import qualified Coalmine.HappyPathIO as HappyPathIO
 import qualified Data.Attoparsec.Text as Attoparsec
 import qualified Data.ByteString as ByteString
-import qualified PgenieCli.Config.Defaults as Defaults
-import PgenieCli.Config.Model
-import PgenieCli.Prelude
+import qualified Pgenie.ClientApp.Config.Defaults as Defaults
+import Pgenie.ClientApp.Config.Model
+import Pgenie.ClientApp.Prelude
 import YamlUnscrambler
 
 fileInDir :: Path -> IO Project

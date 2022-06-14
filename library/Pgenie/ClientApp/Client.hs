@@ -1,6 +1,6 @@
 -- |
 -- A thin wrapper over lean http client.
-module PgenieCli.Client
+module Pgenie.ClientApp.Client
   ( Rsc,
     Op,
     Lhc.Err (..),
@@ -21,9 +21,9 @@ import qualified Data.Text.IO as TextIO
 import qualified LeanHttpClient as Lhc
 import qualified Network.HTTP.Client as HttpClient
 import qualified Network.HTTP.Client.TLS as HttpClientTls
+import qualified Pgenie.ClientApp.Config.Model as Config
+import Pgenie.ClientApp.Prelude
 import qualified Pgenie.Protocol.V1 as Protocol
-import qualified PgenieCli.Config.Model as Config
-import PgenieCli.Prelude
 import qualified System.Directory as Directory
 
 acquire :: IO Rsc

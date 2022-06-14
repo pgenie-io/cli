@@ -1,7 +1,7 @@
-module PgenieCli.Config.Defaults where
+module Pgenie.ClientApp.Config.Defaults where
 
-import PgenieCli.Config.Model
-import PgenieCli.Prelude
+import Pgenie.ClientApp.Config.Model
+import Pgenie.ClientApp.Prelude
 
 migrationsDir :: Path
 migrationsDir = "migrations"

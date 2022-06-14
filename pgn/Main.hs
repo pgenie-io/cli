@@ -1,5 +1,5 @@
 module Main where
 
-import qualified PgenieCli.App as App
+import qualified Pgenie.ClientApp.App as App
 
 main = App.main
