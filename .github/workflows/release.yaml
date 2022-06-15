@@ -110,6 +110,7 @@ jobs:
           path: |
             ~\AppData\Roaming\stack
             ~\AppData\Local\Programs\stack
+            .stack-work
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
           restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
