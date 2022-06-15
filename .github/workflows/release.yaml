@@ -3,8 +3,6 @@ name: Release
 
 on:
   push:
-    branches:
-      - dev
     tags:
       - v[0-9]+.*
 
@@ -151,8 +149,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          draft: true
-          prerelease: true
+          draft: false
+          prerelease: false
       - name: Upload assets to Github release
         uses: xresloader/upload-to-github-release@v1.3.4
         env:
@@ -160,6 +158,6 @@ jobs:
         with:
           file: "artifact/*"
           tag_name: ${{ needs.resolve-metadata.outputs.version }}
-          draft: true
-          prerelease: true
-          overwrite: true
+          draft: false
+          prerelease: false
+          overwrite: false
