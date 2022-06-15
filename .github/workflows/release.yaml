@@ -117,3 +117,42 @@ jobs:
           name: windows-x64
           path: ${{env.ARTIFACT}}
           if-no-files-found: error
+
+  release:
+    needs:
+      - resolve-metadata
+      - build-linux-artifact
+      - build-macos-artifact
+      - build-windows-artifact
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: linux-x64
+          path: artifact
+      - uses: actions/download-artifact@v2
+        with:
+          name: macos-x64
+          path: artifact
+      - uses: actions/download-artifact@v2
+        with:
+          name: windows-x64
+          path: artifact
+      - name: Create Github release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          draft: true
+          prerelease: true
+      - name: Upload assets to Github release
+        uses: xresloader/upload-to-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          file: "artifact/*"
+          tag_name: ${{ needs.resolve-metadata.outputs.version }}
+          draft: true
+          prerelease: true
+          overwrite: true
