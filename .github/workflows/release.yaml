@@ -30,10 +30,10 @@ jobs:
           tag="${GITHUB_REF##*/}"
           cabal_version="$(grep -oP '^version:\s*\K.*' ${{steps.find-cabal.outputs.file}})"
 
-          if [[ -z "$tag" || "$tag" -eq "dev" ]]
+          if [[ "$tag" -eq "dev" ]]
           then
-            echo "No tag is specified. Using version from Cabal."
-            echo "::set-output name=version::$cabal_version"
+            echo "No tag is specified. Using version from Cabal and marking it \"dev\"."
+            echo "::set-output name=version::$cabal_version-dev"
           elif [ "$tag" != "v$cabal_version" ]
           then
             echo "Tagged version ($tag) does not match the one in ${{steps.find-cabal.outputs.file}} (v$cabal_version)"
