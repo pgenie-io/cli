@@ -111,7 +111,11 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
           restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
-      - run: zip "$ARTIFACT" -C artifact pgn.exe
+      - uses: thedoctor0/zip-release@0.6.2
+        with:
+          type: zip
+          filename: ${{env.ARTIFACT}}
+          path: artifact/pgn.exe
       - uses: actions/upload-artifact@v3
         with:
           name: windows-x64
