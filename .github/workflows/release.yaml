@@ -4,7 +4,7 @@ name: Release
 on:
   push:
     branches:
-      - master
+      - dev
 
 jobs:
   resolve-metadata:
@@ -25,7 +25,6 @@ jobs:
           echo "::set-output name=file::$file"
       - id: resolve-version
         run: |
-          tag="${GITHUB_REF##*/}"
           cabal_version="$(grep -oP '^version:\s*\K.*' ${{steps.find-cabal.outputs.file}})"
 
           if [[ "$tag" -eq "dev" ]]
