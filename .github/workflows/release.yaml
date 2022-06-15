@@ -151,7 +151,7 @@ jobs:
           draft: true
           prerelease: true
       - name: Upload assets to Github release
-        uses: xresloader/upload-to-release@v1
+        uses: xresloader/upload-to-github-release@v1.3.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
