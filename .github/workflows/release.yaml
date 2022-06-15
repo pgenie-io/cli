@@ -105,7 +105,14 @@ jobs:
           enable-stack: true
           stack-version: 2.7.5
           stack-no-global: true
-      - uses: freckle/stack-cache-action@v2.0.3
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~\AppData\Roaming\stack
+            ~\AppData\Local\Programs\stack
+            .stack-work
+          key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
+          restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
       - uses: thedoctor0/zip-release@0.6.2
         with:
