@@ -7,13 +7,13 @@ packages:
 - completed:
     name: coalmine
     pantry-tree:
-      sha256: 2cc003be19e856aa745d4024d5c30ece2d64d8a221821d6d60769d1b690051d9
+      sha256: bd0445c75a162897615ab3e1f62b208f6b64c01263747b8af58a2600e4c8e6d9
       size: 9575
-    commit: 671cb43cfebadec5fc89c07b201544a83d145a3a
+    commit: 7c4e2c0d290f7fa958b4b5a8e8518283686f5717
     git: https://github.com/nikita-volkov/coalmine
-    version: '0.1'
+    version: 0.1.0.1
   original:
-    commit: 671cb43cfebadec5fc89c07b201544a83d145a3a
+    commit: 7c4e2c0d290f7fa958b4b5a8e8518283686f5717
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines
@@ -136,35 +136,35 @@ packages:
 - completed:
     name: pgenie-protocol
     pantry-tree:
-      sha256: b94c6131994a9d0cb1aa6ac18c269239b9ad2d4206f05f92eff86fd9b4ed80e5
-      size: 552
-    commit: 3cc38a8222ce99337953c68e6a60a938459bc567
+      sha256: 94cf96033888fcd94e919202daff5a312ccd0c4b7ae0801d8742019a38da7f0e
+      size: 478
+    commit: 897af90cd2c0b32ed39b4240273d21333b5d0bfb
     git: https://github.com/pgenie-tech/protocol
     version: '0.1'
   original:
-    commit: 3cc38a8222ce99337953c68e6a60a938459bc567
+    commit: 897af90cd2c0b32ed39b4240273d21333b5d0bfb
     git: https://github.com/pgenie-tech/protocol
 - completed:
     name: pgenie-client
     pantry-tree:
-      sha256: 54959470ec8ff022d0ba7ac02736043e75cb3f4606a0f30b908fdc3b2385f8cd
-      size: 360
-    commit: 28b0597de913510c52c326898f3846d8536d3380
+      sha256: 796ca3f7636621f4900f7cd727fbcb4b1e7558d209d6a4e226d77b2dec19039e
+      size: 288
+    commit: a411d737b867f4d2e1b941b03895f945b095eeac
     git: https://github.com/pgenie-tech/client
     version: '0.1'
   original:
-    commit: 28b0597de913510c52c326898f3846d8536d3380
+    commit: a411d737b867f4d2e1b941b03895f945b095eeac
     git: https://github.com/pgenie-tech/client
 - completed:
     name: pgenie-config
     pantry-tree:
-      sha256: ebb1b3e35470dd937938f17961127e024521b9f2536406829fa011a2cf209a2e
-      size: 575
-    commit: 06f92c7f57e1057dcf464ea8fe4794506da4ae29
+      sha256: f93fb08dad6109cf6418459c61820dbaddf0357c3502f0e0ba4c5b64df87858d
+      size: 503
+    commit: fd93a40d4086c31d6524f0866a97cfefac31d5d6
     git: https://github.com/pgenie-tech/config
     version: '0.1'
   original:
-    commit: 06f92c7f57e1057dcf464ea8fe4794506da4ae29
+    commit: fd93a40d4086c31d6524f0866a97cfefac31d5d6
     git: https://github.com/pgenie-tech/config
 snapshots:
 - completed:
