@@ -1,0 +1,44 @@
+
+name: Release
+
+on:
+  push:
+    branches:
+      - dev
+    tags:
+      - v[0-9]+.*
+
+jobs:
+  resolve-metadata:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{steps.resolve-version.outputs.version}}
+    steps:
+      - uses: actions/checkout@v3
+      - id: find-cabal
+        run: |
+          files=(*.cabal)
+          if [ "${#files[@]}" -ne 1 ]
+          then
+            echo "More than 1 cabal file"
+            exit 1
+          fi
+          file=${files[0]}
+          echo "::set-output name=file::$file"
+      - id: resolve-version
+        run: |
+          tag="${GITHUB_REF##*/}"
+          cabal_version="$(grep -oP '^version:\s*\K.*' ${{steps.find-cabal.outputs.file}})"
+
+          if [[ -z "$tag" || "$tag" -eq "dev" ]]
+          then
+            echo "No tag is specified. Using version from Cabal."
+            echo "::set-output name=version::$cabal_version"
+          elif [ "$tag" != "v$cabal_version" ]
+          then
+            echo "Tagged version ($tag) does not match the one in ${{steps.find-cabal.outputs.file}} (v$cabal_version)"
+            exit 1
+          else
+            echo "Version to be released is $cabal_version"
+            echo "::set-output name=version::$cabal_version"
+          fi
