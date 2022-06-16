@@ -25,14 +25,15 @@ jobs:
       ARTIFACT: artifact/${{ needs.get-metadata.outputs.name }}-v${{ needs.get-metadata.outputs.version }}-linux-x64.tar.xz
     steps:
       - uses: actions/checkout@v3
-      - uses: haskell/actions/setup@v2
+      - id: setup-haskell
+        uses: haskell/actions/setup@v2
         with:
           enable-stack: true
           stack-version: 2.7.5
           stack-no-global: true
       - uses: actions/cache@v3
         with:
-          path: ~/.stack
+          path: ${{ steps.setup-haskell.outputs.stack-root }}
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
           restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
@@ -51,14 +52,15 @@ jobs:
       ARTIFACT: artifact/${{ needs.get-metadata.outputs.name }}-v${{ needs.get-metadata.outputs.version }}-macos-x64.tar.xz
     steps:
       - uses: actions/checkout@v3
-      - uses: haskell/actions/setup@v2
+      - id: setup-haskell
+        uses: haskell/actions/setup@v2
         with:
           enable-stack: true
           stack-version: 2.7.5
           stack-no-global: true
       - uses: actions/cache@v3
         with:
-          path: ~/.stack
+          path: ${{ steps.setup-haskell.outputs.stack-root }}
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
           restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
@@ -77,18 +79,15 @@ jobs:
       ARTIFACT: artifact/${{ needs.get-metadata.outputs.name }}-v${{ needs.get-metadata.outputs.version }}-windows-x64.tar.xz
     steps:
       - uses: actions/checkout@v3
-      - uses: haskell/actions/setup@v2
+      - id: setup-haskell
+        uses: haskell/actions/setup@v2
         with:
           enable-stack: true
           stack-version: 2.7.5
           stack-no-global: true
       - uses: actions/cache@v3
         with:
-          path: |
-            C:\sr
-            ~\AppData\Roaming\stack
-            ~\AppData\Local\Programs\stack
-            .stack-work
+          path: ${{ steps.setup-haskell.outputs.stack-root }}
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
           restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
