@@ -138,7 +138,7 @@ jobs:
           tag: ${{ env.TAG }}
       - name: Fail if tag exists
         run: |
-          if [ ${{ steps.check-tag.outputs.exists }} ]
+          if [ ${{ steps.check-tag.outputs.exists }} == true ]
           then
             echo "Tag ${{ env.TAG }} already exists"
             exit 1
