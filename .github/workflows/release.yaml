@@ -131,13 +131,13 @@ jobs:
           name: windows-x64
           path: artifact
       - name: Tag and release
-        uses: actions/create-release@v1.1.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ncipollo/release-action@v1.10.0
         with:
-          tag_name: v${{ needs.get-metadata.outputs.version }}
+          tag: v${{ needs.get-metadata.outputs.version }}
           draft: ${{env.DRAFT}}
           prerelease: ${{env.PRERELEASE}}
+          commit: ${{ github.sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload assets to Github release
         uses: xresloader/upload-to-github-release@v1.3.4
         env:
