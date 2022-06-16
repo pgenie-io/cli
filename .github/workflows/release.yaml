@@ -140,3 +140,4 @@ jobs:
           prerelease: ${{env.PRERELEASE}}
           commit: ${{ github.sha }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          artifactErrorsFailBuild: true
