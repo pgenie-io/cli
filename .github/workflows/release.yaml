@@ -87,7 +87,10 @@ jobs:
           stack-no-global: true
       - uses: actions/cache@v3
         with:
-          path: ${{ steps.setup-haskell.outputs.stack-root }}
+          path: |
+            ${{ steps.setup-haskell.outputs.stack-root }}
+            ~\AppData\Roaming\stack
+            ~\AppData\Local\Programs\stack
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
           restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
