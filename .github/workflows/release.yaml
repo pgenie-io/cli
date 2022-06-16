@@ -135,3 +135,4 @@ jobs:
         with:
           file: "artifact/*"
           tag_name: v${{ needs.get-metadata.outputs.version }}
+          draft: false
