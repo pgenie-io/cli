@@ -4,6 +4,7 @@ name: Release
 on:
   push:
     branches:
+      - release
       - master
 
 jobs:
@@ -113,6 +114,9 @@ jobs:
       - build-macos-artifact
       - build-windows-artifact
     runs-on: ubuntu-latest
+    env:
+      DRAFT: ${{ github.ref_name != 'release' }}
+      PRERELEASE: false
     steps:
       - uses: actions/download-artifact@v2
         with:
@@ -132,6 +136,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ needs.get-metadata.outputs.version }}
+          draft: ${{env.DRAFT}}
+          prerelease: ${{env.PRERELEASE}}
       - name: Upload assets to Github release
         uses: xresloader/upload-to-github-release@v1.3.4
         env:
@@ -139,4 +145,5 @@ jobs:
         with:
           file: "artifact/*"
           tag_name: v${{ needs.get-metadata.outputs.version }}
-          draft: false
+          draft: ${{env.DRAFT}}
+          prerelease: ${{env.PRERELEASE}}
