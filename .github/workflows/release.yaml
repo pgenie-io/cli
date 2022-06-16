@@ -117,6 +117,7 @@ jobs:
     env:
       DRAFT: ${{ github.ref_name != 'release' }}
       PRERELEASE: false
+      TAG: v${{ needs.get-metadata.outputs.version }}
     steps:
       - uses: actions/download-artifact@v2
         with:
@@ -133,7 +134,7 @@ jobs:
       - id: tag-and-release
         uses: ncipollo/release-action@v1.10.0
         with:
-          tag: v${{ needs.get-metadata.outputs.version }}
+          tag: ${{ !env.DRAFT && env.TAG || '' }}
           artifacts: "artifact/*"
           allowUpdates: ${{env.DRAFT}}
           draft: ${{env.DRAFT}}
