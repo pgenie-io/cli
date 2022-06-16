@@ -108,6 +108,7 @@ jobs:
           if-no-files-found: error
 
   release:
+    if: ${{ github.ref_name == 'release' }}
     needs:
       - get-metadata
       - build-linux-artifact
@@ -115,7 +116,7 @@ jobs:
       - build-windows-artifact
     runs-on: ubuntu-latest
     env:
-      DRAFT: ${{ github.ref_name != 'release' }}
+      DRAFT: false
       PRERELEASE: false
       TAG: v${{ needs.get-metadata.outputs.version }}
     steps:
@@ -134,7 +135,7 @@ jobs:
       - id: tag-and-release
         uses: ncipollo/release-action@v1.10.0
         with:
-          tag: ${{ !env.DRAFT && env.TAG || '' }}
+          tag: ${{ env.TAG }}
           artifacts: "artifact/*"
           allowUpdates: ${{env.DRAFT}}
           draft: ${{env.DRAFT}}
