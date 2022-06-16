@@ -130,6 +130,19 @@ jobs:
         with:
           name: windows-x64
           path: artifact
+      - id: check-tag
+        uses: mukunku/tag-exists-action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with: 
+          tag: ${{ env.TAG }}
+      - name: Fail if tag exists
+        run: |
+          if [ ${{ steps.check-tag.outputs.exists }} ]
+          then
+            echo "Tag ${{ env.TAG }} already exists"
+            exit 1
+          fi
       - id: tag-and-release
         uses: ncipollo/release-action@v1.10.0
         with:
