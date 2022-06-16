@@ -85,6 +85,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
+            C:\sr
             ~\AppData\Roaming\stack
             ~\AppData\Local\Programs\stack
             .stack-work
