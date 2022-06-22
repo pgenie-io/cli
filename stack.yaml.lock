@@ -7,13 +7,13 @@ packages:
 - completed:
     name: coalmine
     pantry-tree:
-      sha256: bd0445c75a162897615ab3e1f62b208f6b64c01263747b8af58a2600e4c8e6d9
-      size: 9575
-    commit: 7c4e2c0d290f7fa958b4b5a8e8518283686f5717
+      sha256: b6610b4dca28a6a2f44043c8ce8b1c3caefc483e8f75e5c0b2dfc7fd6b694843
+      size: 9574
+    commit: 43e22a08f532e8279c784852ef0a213f7aeb1d37
     git: https://github.com/nikita-volkov/coalmine
     version: 0.1.0.1
   original:
-    commit: 7c4e2c0d290f7fa958b4b5a8e8518283686f5717
+    commit: 43e22a08f532e8279c784852ef0a213f7aeb1d37
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines
@@ -27,17 +27,6 @@ packages:
     commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
     git: https://github.com/nikita-volkov/moore-machines
 - completed:
-    name: isomorphism-class
-    pantry-tree:
-      sha256: e15893487ac37aa96b0c77a71660c9e3c402459bbb6bf1f9e4f60615f0fb7496
-      size: 692
-    commit: e66a02cef13eb3801e202667de4279cb3a591be0
-    git: https://github.com/nikita-volkov/isomorphism-class
-    version: '0.1'
-  original:
-    commit: e66a02cef13eb3801e202667de4279cb3a591be0
-    git: https://github.com/nikita-volkov/isomorphism-class
-- completed:
     name: structure-kit
     pantry-tree:
       sha256: b7779ebe935d65c0b4f6e3ea8b5f5011abdabf362b1673826545c93625e050ad
@@ -48,6 +37,28 @@ packages:
   original:
     commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
     git: https://github.com/nikita-volkov/structure-kit
+- completed:
+    name: lean-http-client
+    pantry-tree:
+      sha256: 64da0f3390166969e2fe6a140d847c315258f9bcb8fcaf3169fd78b4b25b6f6f
+      size: 544
+    commit: 52343895df1e5ae49159b8c5f76a50ac438216b1
+    git: https://github.com/nikita-volkov/lean-http-client
+    version: '0.1'
+  original:
+    commit: 52343895df1e5ae49159b8c5f76a50ac438216b1
+    git: https://github.com/nikita-volkov/lean-http-client
+- completed:
+    name: distillery
+    pantry-tree:
+      sha256: 03d32965a35914b68bdaa149db48ce66e774783360f5b7d8b18db72de61b7baf
+      size: 524
+    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
+    git: https://github.com/nikita-volkov/distillery
+    version: '0.1'
+  original:
+    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
+    git: https://github.com/nikita-volkov/distillery
 - completed:
     pantry-tree:
       sha256: 4c700792b51236a70e364ac79c1cd0d197596264c0f57099eb5cea193b663c1b
@@ -112,27 +123,19 @@ packages:
   original:
     hackage: vector-extras-0.2.7
 - completed:
-    name: lean-http-client
     pantry-tree:
-      sha256: 7a2401e0f6bc1f71fea5ddcdca8e0ea98f999b6c0bcc63ac54324c0b2e0682db
-      size: 544
-    commit: 5049bd8c56bcc1473d65ccf351f7979772d478b3
-    git: https://github.com/nikita-volkov/lean-http-client
-    version: '0.1'
+      sha256: 061bc138ab0c1409471cc477e9d548ea19fed872cd176cf689468acd51a010e6
+      size: 465
+    hackage: isomorphism-class-0.1.0.1@sha256:d893b3afe5c1c6bbf24aa4b19a954f9de73a10f32b4684a39e9cb73733fa6e74,1703
   original:
-    commit: 5049bd8c56bcc1473d65ccf351f7979772d478b3
-    git: https://github.com/nikita-volkov/lean-http-client
+    hackage: isomorphism-class-0.1.0.1
 - completed:
-    name: distillery
     pantry-tree:
-      sha256: 03d32965a35914b68bdaa149db48ce66e774783360f5b7d8b18db72de61b7baf
-      size: 524
-    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
-    git: https://github.com/nikita-volkov/distillery
-    version: '0.1'
+      sha256: 8883631a132438e7892fcb13e89d6bbcdc0ac76c56fbea8df8d7aa482ce81f73
+      size: 724
+    hackage: text-builder-dev-0.3.3@sha256:79ec422defcc2e5b34f94129c72b98d34b2efc1ed8bbd945ccb8f4f535a892c3,2784
   original:
-    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
-    git: https://github.com/nikita-volkov/distillery
+    hackage: text-builder-dev-0.3.3
 - completed:
     name: pgenie-protocol
     pantry-tree:
@@ -147,13 +150,13 @@ packages:
 - completed:
     name: pgenie-client
     pantry-tree:
-      sha256: 796ca3f7636621f4900f7cd727fbcb4b1e7558d209d6a4e226d77b2dec19039e
+      sha256: 41af3c0f5ae61b225f4a8f3bd08dfdccc653c18c41cde8ef0e4b7076b6a9e340
       size: 288
-    commit: a411d737b867f4d2e1b941b03895f945b095eeac
+    commit: 84e67fb6844af0d1436f6fbd61693422f2b46666
     git: https://github.com/pgenie-tech/client
     version: '0.1'
   original:
-    commit: a411d737b867f4d2e1b941b03895f945b095eeac
+    commit: 84e67fb6844af0d1436f6fbd61693422f2b46666
     git: https://github.com/pgenie-tech/client
 - completed:
     name: pgenie-config
