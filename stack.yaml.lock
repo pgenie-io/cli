@@ -142,33 +142,33 @@ packages:
       sha256: 94cf96033888fcd94e919202daff5a312ccd0c4b7ae0801d8742019a38da7f0e
       size: 478
     commit: 897af90cd2c0b32ed39b4240273d21333b5d0bfb
-    git: https://github.com/pgenie-tech/protocol
+    git: https://github.com/pgenie-io/protocol
     version: '0.1'
   original:
     commit: 897af90cd2c0b32ed39b4240273d21333b5d0bfb
-    git: https://github.com/pgenie-tech/protocol
+    git: https://github.com/pgenie-io/protocol
 - completed:
     name: pgenie-client
     pantry-tree:
       sha256: 41af3c0f5ae61b225f4a8f3bd08dfdccc653c18c41cde8ef0e4b7076b6a9e340
       size: 288
     commit: 84e67fb6844af0d1436f6fbd61693422f2b46666
-    git: https://github.com/pgenie-tech/client
+    git: https://github.com/pgenie-io/client
     version: '0.1'
   original:
     commit: 84e67fb6844af0d1436f6fbd61693422f2b46666
-    git: https://github.com/pgenie-tech/client
+    git: https://github.com/pgenie-io/client
 - completed:
     name: pgenie-config
     pantry-tree:
       sha256: f93fb08dad6109cf6418459c61820dbaddf0357c3502f0e0ba4c5b64df87858d
       size: 503
     commit: fd93a40d4086c31d6524f0866a97cfefac31d5d6
-    git: https://github.com/pgenie-tech/config
+    git: https://github.com/pgenie-io/config
     version: '0.1'
   original:
     commit: fd93a40d4086c31d6524f0866a97cfefac31d5d6
-    git: https://github.com/pgenie-tech/config
+    git: https://github.com/pgenie-io/config
 snapshots:
 - completed:
     sha256: 869e23c4f7367895ae63b129255b70bc8b4b965229aa258f6c50141c6b10ae76

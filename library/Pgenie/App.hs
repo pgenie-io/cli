@@ -1,4 +1,4 @@
-module Pgenie.ClientApp (main) where
+module Pgenie.App (main) where
 
 import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude

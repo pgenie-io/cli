@@ -1,6 +1,6 @@
 cabal-version: 3.0
 
-name: pgenie-client-app
+name: pgenie-app
 version: 1.0.0
 
 common language-settings
@@ -17,7 +17,7 @@ library
   import: language-settings
   hs-source-dirs: library
   exposed-modules:
-    Pgenie.ClientApp
+    Pgenie.App
   build-depends:
     attoparsec,
     cereal,
@@ -43,7 +43,7 @@ test-suite test
   main-is: Main.hs
   build-depends:
     coalmine,
-    pgenie-client-app,
+    pgenie-app,
     rerebase,
 
 executable pgn
@@ -53,7 +53,7 @@ executable pgn
   build-depends:
     coalmine,
     optima,
-    pgenie-client-app,
+    pgenie-app,
     rerebase,
 
 -- Development version.
@@ -66,5 +66,5 @@ executable pgn-dev
   build-depends:
     coalmine,
     optima,
-    pgenie-client-app,
+    pgenie-app,
     rerebase,
