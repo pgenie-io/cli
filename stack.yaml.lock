@@ -150,13 +150,13 @@ packages:
 - completed:
     name: pgenie-client
     pantry-tree:
-      sha256: 7112480bc053cec651513d764588b5a5da9d61a2f226d5dd57c309e41601ce39
+      sha256: 80332780a3cf0459263863a2de046f8c85673c4a076e3eab9df5ae23bc30b7d0
       size: 288
-    commit: e0e203e2dd25da54d17ee161753da4e5884ce959
+    commit: 176a09c1b6ff2971d59d9c0e65f3471c8956f8b5
     git: https://github.com/pgenie-io/client
     version: '0.1'
   original:
-    commit: e0e203e2dd25da54d17ee161753da4e5884ce959
+    commit: 176a09c1b6ff2971d59d9c0e65f3471c8956f8b5
     git: https://github.com/pgenie-io/client
 - completed:
     name: pgenie-config

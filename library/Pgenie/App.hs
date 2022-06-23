@@ -41,12 +41,10 @@ generate ::
   [(Path, Text)] ->
   IO ()
 generate secure host port config migrations queries = do
-  res <- Client.operateGlobally op secure host port
+  res <- Client.runHappily op secure host port
   results <- case res of
     Left err -> die (to err)
-    Right res -> case res of
-      Left err -> die (to err)
-      Right res -> return res
+    Right res -> return res
   forM_ results $ \(nestPath -> path, contents) -> do
     Path.createDirsTo path
     liftIO $ TextIO.writeFile (printCompactAs path) contents
