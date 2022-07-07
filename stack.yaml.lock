@@ -5,15 +5,22 @@
 
 packages:
 - completed:
+    pantry-tree:
+      sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
+      size: 473
+    hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
+  original:
+    hackage: punycode-2.0
+- completed:
     name: coalmine
     pantry-tree:
-      sha256: b6610b4dca28a6a2f44043c8ce8b1c3caefc483e8f75e5c0b2dfc7fd6b694843
-      size: 9574
-    commit: 43e22a08f532e8279c784852ef0a213f7aeb1d37
+      sha256: f0eb619cf8af6c99e95b5c3961f951580667fdb1d6e7d97df9a980d08948b54e
+      size: 9343
+    commit: a67c75b27fa619ae5fa93a2792555638957c90c4
     git: https://github.com/nikita-volkov/coalmine
-    version: 0.1.0.1
+    version: 0.1.0.2
   original:
-    commit: 43e22a08f532e8279c784852ef0a213f7aeb1d37
+    commit: a67c75b27fa619ae5fa93a2792555638957c90c4
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines
@@ -60,83 +67,6 @@ packages:
     commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
     git: https://github.com/nikita-volkov/distillery
 - completed:
-    pantry-tree:
-      sha256: 4c700792b51236a70e364ac79c1cd0d197596264c0f57099eb5cea193b663c1b
-      size: 408
-    hackage: aeson-value-parser-0.19.7@sha256:c114ae7deb86b55154a408896602f9ce61555ac6fd044e8e209c9c544ad2f4db,2054
-  original:
-    hackage: aeson-value-parser-0.19.7
-- completed:
-    pantry-tree:
-      sha256: 1240e61d89fa70c65636995919674b5bc55bc33a719e555fa4ec8950a91eb6e5
-      size: 604
-    hackage: cereal-unordered-containers-0.1@sha256:e47c65f76633248fccdea1f38de952473edf7a28cf05af38e64b681a47305c92,1544
-  original:
-    hackage: cereal-unordered-containers-0.1
-- completed:
-    pantry-tree:
-      sha256: 520aa5f59b55c14d27115a801f499f940a563849b0c54876bcd6be41f6450713
-      size: 456
-    hackage: cereal-data-dword-0.1.1@sha256:a3fa6dfafaeeb3774c5888dfa601d561ce05b0af66f52859970247e58135d47e,1381
-  original:
-    hackage: cereal-data-dword-0.1.1
-- completed:
-    pantry-tree:
-      sha256: b95775b15664193c3301f10233f26ff43f60327f700c15e439cbed7f615c401c
-      size: 446
-    hackage: domain-aeson-0.1@sha256:8337de97b765b535cf8c252ca051c7f1573ad03b21774a09dcb6673ad7269ad1,1897
-  original:
-    hackage: domain-aeson-0.1
-- completed:
-    pantry-tree:
-      sha256: babc92fb6290d5d7b59cf6a07c8abb51a1a176824371f5cbf2a916259a337915
-      size: 366
-    hackage: domain-cereal-0.1@sha256:db6fe7980ee3f9834a9e2c7cbe577354406286fecfb18477aac712cc008a83ce,1879
-  original:
-    hackage: domain-cereal-0.1
-- completed:
-    pantry-tree:
-      sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
-      size: 473
-    hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
-  original:
-    hackage: punycode-2.0
-- completed:
-    pantry-tree:
-      sha256: 51dc0ab22269973eec829ae476fb3102cfe155ffde2fd1d039dedf65c7842031
-      size: 509
-    hackage: timestamp-0.2@sha256:103fe49ce206922d3b14d57d8aff25eaf03c70fef5fcdaeaeb8416aaee163e51,1598
-  original:
-    hackage: timestamp-0.2
-- completed:
-    pantry-tree:
-      sha256: af6a4af7b400a4891918a0d3b60d16cbf90a4d5d0a101223f920d684d435754c
-      size: 402
-    hackage: leb128-cereal-1.2@sha256:ba8770629aa1fa8524cbbea3b4065b21def815a766ab6c74174aa57f8c124ead,1883
-  original:
-    hackage: leb128-cereal-1.2
-- completed:
-    pantry-tree:
-      sha256: e79a34f1cb9dd2a4a5c88d0841b88bf72cc6c873aef8dbe8d22de12d6e8c7a1d
-      size: 816
-    hackage: vector-extras-0.2.7@sha256:0bb96549e289f6cc7ba7afb3f985af39611f1f5966bce8e036419eb9a1174848,1915
-  original:
-    hackage: vector-extras-0.2.7
-- completed:
-    pantry-tree:
-      sha256: 061bc138ab0c1409471cc477e9d548ea19fed872cd176cf689468acd51a010e6
-      size: 465
-    hackage: isomorphism-class-0.1.0.1@sha256:d893b3afe5c1c6bbf24aa4b19a954f9de73a10f32b4684a39e9cb73733fa6e74,1703
-  original:
-    hackage: isomorphism-class-0.1.0.1
-- completed:
-    pantry-tree:
-      sha256: 8883631a132438e7892fcb13e89d6bbcdc0ac76c56fbea8df8d7aa482ce81f73
-      size: 724
-    hackage: text-builder-dev-0.3.3@sha256:79ec422defcc2e5b34f94129c72b98d34b2efc1ed8bbd945ccb8f4f535a892c3,2784
-  original:
-    hackage: text-builder-dev-0.3.3
-- completed:
     name: pgenie-protocol
     pantry-tree:
       sha256: 94cf96033888fcd94e919202daff5a312ccd0c4b7ae0801d8742019a38da7f0e
@@ -171,7 +101,7 @@ packages:
     git: https://github.com/pgenie-io/config
 snapshots:
 - completed:
-    sha256: 869e23c4f7367895ae63b129255b70bc8b4b965229aa258f6c50141c6b10ae76
-    size: 607265
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/6/8.yaml
-  original: nightly-2022-06-08
+    sha256: f749167ba2a9ff2fcd0434bbd76a17a277572e90798617bc024d40a5324ce2af
+    size: 616346
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/7.yaml
+  original: nightly-2022-07-07
