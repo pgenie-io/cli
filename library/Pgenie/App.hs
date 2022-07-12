@@ -3,21 +3,30 @@ module Pgenie.App (main) where
 import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
+import qualified Optima
 import qualified Pgenie.Client as Client
 import qualified Pgenie.Config.Model as Config
 import qualified Pgenie.Config.Parsing as Parsing
 import qualified System.Directory as Directory
 
-main ::
-  Bool ->
-  Text ->
-  Maybe Int ->
-  IO ()
-main secure host port = do
+main :: IO ()
+main = do
+  host <- readArgs
   config <- Parsing.fileInDir mempty
   migrations <- loadSqlFiles (#migrationsDir config)
   queries <- loadSqlFiles (#queriesDir config)
-  generate secure host port config migrations queries
+  generate True host Nothing config migrations queries
+
+readArgs :: IO Text
+readArgs =
+  Optima.params "pgenie.io CLI app" $
+    ( Optima.param Nothing "server" $
+        Optima.value
+          "Service server"
+          (Optima.explicitlyRepresented id "pgenie.io")
+          Optima.unformatted
+          Optima.implicitlyParsed
+    )
 
 loadSqlFiles :: Path -> IO [(Path, Text)]
 loadSqlFiles dir =

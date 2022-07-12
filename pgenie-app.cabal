@@ -9,6 +9,7 @@ common base-settings
   build-depends:
     coalmine,
     directory,
+    optima,
     pgenie-client,
     pgenie-config,
     rerebase,
@@ -20,7 +21,6 @@ common executable-settings
     -threaded
     "-with-rtsopts=-N -I0 -qg"
   build-depends:
-    optima,
     pgenie-app,
 
 common test-settings
@@ -43,12 +43,4 @@ test-suite test
 executable pgn
   import: executable-settings
   hs-source-dirs: pgn
-  main-is: Main.hs
-
--- Development version.
--- Assumes you have a valid HTTP server running locally
--- at port 27400.
-executable pgn-dev
-  import: executable-settings
-  hs-source-dirs: pgn-dev
   main-is: Main.hs
