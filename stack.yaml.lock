@@ -91,13 +91,13 @@ packages:
 - completed:
     name: pgenie-config
     pantry-tree:
-      sha256: 4fc5fe446ae6214e6d06f10b9169b59cb017028b4fd033385d1dce34a11ecbae
-      size: 502
-    commit: 361a2b415c7c1a75b8235c7414e6a81326026faa
+      sha256: d65056626fbcd4d27b432e51408606c7109d7e40875c9d0be6ba1ffbdb9dde1b
+      size: 582
+    commit: b13434df2452326a75031fc9709a690cfa356097
     git: https://github.com/pgenie-io/config
     version: '0.1'
   original:
-    commit: 361a2b415c7c1a75b8235c7414e6a81326026faa
+    commit: b13434df2452326a75031fc9709a690cfa356097
     git: https://github.com/pgenie-io/config
 snapshots:
 - completed:

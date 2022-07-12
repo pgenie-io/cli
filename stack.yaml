@@ -16,4 +16,4 @@ extra-deps:
   - git: https://github.com/pgenie-io/client
     commit: 176a09c1b6ff2971d59d9c0e65f3471c8956f8b5
   - git: https://github.com/pgenie-io/config
-    commit: 361a2b415c7c1a75b8235c7414e6a81326026faa
+    commit: b13434df2452326a75031fc9709a690cfa356097
