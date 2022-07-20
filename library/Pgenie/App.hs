@@ -5,6 +5,7 @@ import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
 import qualified Optima
 import qualified Pgenie.App.ConfigToProtocolMapping as ConfigToProtocolMapping
+import qualified Pgenie.App.ServiceUrl as ServiceUrl
 import qualified Pgenie.Client as Client
 import qualified Pgenie.Config.Model as Config
 import qualified Pgenie.Config.Parsing as Parsing
@@ -12,43 +13,24 @@ import qualified System.Directory as Directory
 
 main :: IO ()
 main = do
-  (host, port, secure) <- readArgs
+  ServiceUrl.ServiceUrl {..} <- readArgs
   config <- Parsing.fileInDir mempty
   migrations <- loadSqlFiles (#migrationsDir config)
   queries <- loadSqlFiles (#queriesDir config)
-  generate secure host port config migrations queries
+  generate serviceUrlSecure serviceUrlHost serviceUrlPort config migrations queries
 
-readArgs :: IO (Text, Maybe Int, Bool)
+readArgs :: IO ServiceUrl.ServiceUrl
 readArgs =
   Optima.params "pgenie.io CLI app" $
-    (,,)
-      <$> Optima.param
-        Nothing
-        "service-host"
-        ( Optima.value
-            "Service host"
-            (Optima.explicitlyRepresented id "pgenie.io")
-            Optima.unformatted
-            Optima.implicitlyParsed
-        )
-      <*> optional
-        ( Optima.param
-            Nothing
-            "service-port"
-            ( Optima.value
-                "Service port"
-                Optima.defaultless
-                Optima.unformatted
-                Optima.implicitlyParsed
-            )
-        )
-      <*> ( Optima.param
-              Nothing
-              "service-insecure"
-              (Optima.flag "HTTP if present, HTTPS otherwise")
-              $> True
-              <|> pure False
-          )
+    Optima.param
+      Nothing
+      "service-url"
+      ( Optima.value
+          "Service URL (for development purposes)"
+          (Optima.explicitlyRepresented showAs def)
+          Optima.unformatted
+          Optima.implicitlyParsed
+      )
 
 loadSqlFiles :: Path -> IO (BVec (Path, Text))
 loadSqlFiles dir =
