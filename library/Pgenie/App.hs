@@ -4,6 +4,7 @@ import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
 import qualified Optima
+import qualified Pgenie.App.ConfigToProtocolMapping as ConfigToProtocolMapping
 import qualified Pgenie.Client as Client
 import qualified Pgenie.Config.Model as Config
 import qualified Pgenie.Config.Parsing as Parsing
@@ -28,9 +29,11 @@ readArgs =
           Optima.implicitlyParsed
     )
 
-loadSqlFiles :: Path -> IO [(Path, Text)]
+loadSqlFiles :: Path -> IO (BVec (Path, Text))
 loadSqlFiles dir =
-  Path.listDirectory dir >>= traverse load . sort . filter pred
+  Path.listDirectory dir
+    >>= traverse load . sort . filter pred
+    <&> fromList
   where
     pred path =
       case Path.extensions path of
@@ -46,8 +49,8 @@ generate ::
   Text ->
   Maybe Int ->
   Config.Project ->
-  [(Path, Text)] ->
-  [(Path, Text)] ->
+  (BVec (Path, Text)) ->
+  (BVec (Path, Text)) ->
   IO ()
 generate secure host port config migrations queries = do
   res <- Client.runHappily op secure host port
@@ -59,6 +62,9 @@ generate secure host port config migrations queries = do
     liftIO $ TextIO.writeFile (printCompactAs path) contents
   where
     op =
-      Client.process (#org config) (#name config) migrations queries
+      Client.process (#space config) (#name config) migrations queries artifacts
+      where
+        artifacts =
+          ConfigToProtocolMapping.artifacts (#artifacts config)
     nestPath path =
-      #outputDir config <> path
+      #artifactsDir config <> path

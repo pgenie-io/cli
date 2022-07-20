@@ -12,6 +12,7 @@ common base-settings
     optima,
     pgenie-client,
     pgenie-config,
+    pgenie-protocol,
     rerebase,
 
 common executable-settings
@@ -33,6 +34,8 @@ library
   hs-source-dirs: library
   exposed-modules:
     Pgenie.App
+  other-modules:
+    Pgenie.App.ConfigToProtocolMapping
 
 test-suite test
   import: test-settings
