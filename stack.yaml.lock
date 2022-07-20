@@ -5,22 +5,15 @@
 
 packages:
 - completed:
-    pantry-tree:
-      sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
-      size: 473
-    hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
-  original:
-    hackage: punycode-2.0
-- completed:
     name: coalmine
     pantry-tree:
-      sha256: f0eb619cf8af6c99e95b5c3961f951580667fdb1d6e7d97df9a980d08948b54e
-      size: 9343
-    commit: a67c75b27fa619ae5fa93a2792555638957c90c4
+      sha256: 8896e428a656c392d25d499f9b024abd0c30459db09e8a78e1645bad43d4fb89
+      size: 9564
+    commit: a2857feca4d8a25bd868e0a4ff985b7ef4db6ec3
     git: https://github.com/nikita-volkov/coalmine
-    version: 0.1.0.2
+    version: 0.1.0.4
   original:
-    commit: a67c75b27fa619ae5fa93a2792555638957c90c4
+    commit: a2857feca4d8a25bd868e0a4ff985b7ef4db6ec3
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines
@@ -45,6 +38,17 @@ packages:
     commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
     git: https://github.com/nikita-volkov/structure-kit
 - completed:
+    name: canapi
+    pantry-tree:
+      sha256: 54c44986c3d7f8daa4464e4e097f312dc3ac0c02f7eb5fbb8bba3a6e6d19487a
+      size: 1319
+    commit: 02f1d9ffea90522a3a0968305793a7f507c7da59
+    git: https://github.com/nikita-volkov/canapi
+    version: '0.1'
+  original:
+    commit: 02f1d9ffea90522a3a0968305793a7f507c7da59
+    git: https://github.com/nikita-volkov/canapi
+- completed:
     name: lean-http-client
     pantry-tree:
       sha256: 64da0f3390166969e2fe6a140d847c315258f9bcb8fcaf3169fd78b4b25b6f6f
@@ -67,41 +71,85 @@ packages:
     commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
     git: https://github.com/nikita-volkov/distillery
 - completed:
+    name: acquire
+    pantry-tree:
+      sha256: e194150d070a0e4f07e5f2285e82f177312f328c7490f3a659f361b4f6324d00
+      size: 438
+    commit: 75194757308ae9340b0e2eda46d8db4d25af7516
+    git: https://github.com/metrix-ai/acquire
+    version: 0.3.1
+  original:
+    commit: 75194757308ae9340b0e2eda46d8db4d25af7516
+    git: https://github.com/metrix-ai/acquire
+- completed:
+    pantry-tree:
+      sha256: 520aa5f59b55c14d27115a801f499f940a563849b0c54876bcd6be41f6450713
+      size: 456
+    hackage: cereal-data-dword-0.1.1@sha256:a3fa6dfafaeeb3774c5888dfa601d561ce05b0af66f52859970247e58135d47e,1381
+  original:
+    hackage: cereal-data-dword-0.1.1
+- completed:
+    pantry-tree:
+      sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
+      size: 473
+    hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
+  original:
+    hackage: punycode-2.0
+- completed:
+    pantry-tree:
+      sha256: 51dc0ab22269973eec829ae476fb3102cfe155ffde2fd1d039dedf65c7842031
+      size: 509
+    hackage: timestamp-0.2@sha256:103fe49ce206922d3b14d57d8aff25eaf03c70fef5fcdaeaeb8416aaee163e51,1598
+  original:
+    hackage: timestamp-0.2
+- completed:
     name: pgenie-protocol
     pantry-tree:
-      sha256: 94cf96033888fcd94e919202daff5a312ccd0c4b7ae0801d8742019a38da7f0e
+      sha256: 6d499128fe4da0679dc4740dbf8d47bf116b1eb032507c722ad099dec68811ba
       size: 478
-    commit: 897af90cd2c0b32ed39b4240273d21333b5d0bfb
+    commit: f0298f5382572e3c4d23676cdb8c8ff7cf1c9efb
     git: https://github.com/pgenie-io/protocol
     version: '0.1'
   original:
-    commit: 897af90cd2c0b32ed39b4240273d21333b5d0bfb
+    commit: f0298f5382572e3c4d23676cdb8c8ff7cf1c9efb
     git: https://github.com/pgenie-io/protocol
 - completed:
     name: pgenie-client
     pantry-tree:
-      sha256: 80332780a3cf0459263863a2de046f8c85673c4a076e3eab9df5ae23bc30b7d0
-      size: 288
-    commit: 176a09c1b6ff2971d59d9c0e65f3471c8956f8b5
+      sha256: c089788bb5685df0beb4c4ffaef53496afa05d4644e10cd1eaa4151d773fb621
+      size: 287
+    commit: 486a054f31aea8384d55eff7bed37dd9bb1c7af4
     git: https://github.com/pgenie-io/client
     version: '0.1'
   original:
-    commit: 176a09c1b6ff2971d59d9c0e65f3471c8956f8b5
+    commit: 486a054f31aea8384d55eff7bed37dd9bb1c7af4
     git: https://github.com/pgenie-io/client
 - completed:
     name: pgenie-config
     pantry-tree:
-      sha256: d65056626fbcd4d27b432e51408606c7109d7e40875c9d0be6ba1ffbdb9dde1b
-      size: 582
-    commit: b13434df2452326a75031fc9709a690cfa356097
+      sha256: 8e2ad4e20e2273110f3b8d6d2f864da7b8daaffbd51814fa9bf3a0bdb78c5f52
+      size: 1146
+    commit: 6fe03edbcc8ebfae8f73d8095c34b36f54d9986c
     git: https://github.com/pgenie-io/config
     version: '0.1'
   original:
-    commit: b13434df2452326a75031fc9709a690cfa356097
+    commit: 6fe03edbcc8ebfae8f73d8095c34b36f54d9986c
     git: https://github.com/pgenie-io/config
 snapshots:
 - completed:
-    sha256: f749167ba2a9ff2fcd0434bbd76a17a277572e90798617bc024d40a5324ce2af
-    size: 616346
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/7.yaml
-  original: nightly-2022-07-07
+    sha256: efddfb079a290eb4721a407fbc60dec91cc6dad054a13b80c94f649ef0ad4fa8
+    size: 463
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/5849b9946d1ea84a2f80da39b0bccd071e24eb9b/snapshot.yaml
+  original:
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/5849b9946d1ea84a2f80da39b0bccd071e24eb9b/snapshot.yaml
+- completed:
+    sha256: 7fff185ddc9c3cf3782ed208aaac9f9285b845bfc163642f11d4173d9c758c20
+    size: 873
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/a80edde26f01c6dfd0bc5f35cd079aa13bf10ce4/snapshot.yaml
+  original:
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/a80edde26f01c6dfd0bc5f35cd079aa13bf10ce4/snapshot.yaml
+- completed:
+    sha256: 6a7d84094bf948100b933f83f8cff586a41633d59cb1adbb89eefc25405fabe8
+    size: 616794
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/16.yaml
+  original: nightly-2022-07-16

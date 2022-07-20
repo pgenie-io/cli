@@ -7,11 +7,13 @@ common base-settings
   default-extensions: ApplicativeDo, Arrows, BangPatterns, BinaryLiterals, BlockArguments, ConstraintKinds, DataKinds, DefaultSignatures, DeriveDataTypeable, DeriveFoldable, DeriveFunctor, DeriveGeneric, DeriveTraversable, DerivingVia, DuplicateRecordFields, EmptyCase, EmptyDataDecls, FlexibleContexts, FlexibleInstances, FunctionalDependencies, GADTs, GeneralizedNewtypeDeriving, HexFloatLiterals, LambdaCase, LiberalTypeSynonyms, MultiParamTypeClasses, MultiWayIf, NoImplicitPrelude, NoMonomorphismRestriction, NumericUnderscores, OverloadedLabels, OverloadedStrings, PatternGuards, PatternSynonyms, ParallelListComp, QuasiQuotes, RankNTypes, RecordWildCards, ScopedTypeVariables, StandaloneDeriving, StrictData, TemplateHaskell, TupleSections, TypeApplications, TypeFamilies, TypeOperators, UndecidableInstances, ViewPatterns
   default-language: Haskell2010
   build-depends:
+    attoparsec,
     coalmine,
     directory,
     optima,
     pgenie-client,
     pgenie-config,
+    pgenie-protocol,
     rerebase,
 
 common executable-settings
@@ -33,6 +35,9 @@ library
   hs-source-dirs: library
   exposed-modules:
     Pgenie.App
+  other-modules:
+    Pgenie.App.ConfigToProtocolMapping
+    Pgenie.App.ServiceUrl
 
 test-suite test
   import: test-settings

@@ -4,6 +4,8 @@ import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
 import qualified Optima
+import qualified Pgenie.App.ConfigToProtocolMapping as ConfigToProtocolMapping
+import qualified Pgenie.App.ServiceUrl as ServiceUrl
 import qualified Pgenie.Client as Client
 import qualified Pgenie.Config.Model as Config
 import qualified Pgenie.Config.Parsing as Parsing
@@ -11,26 +13,30 @@ import qualified System.Directory as Directory
 
 main :: IO ()
 main = do
-  host <- readArgs
+  ServiceUrl.ServiceUrl {..} <- readArgs
   config <- Parsing.fileInDir mempty
   migrations <- loadSqlFiles (#migrationsDir config)
   queries <- loadSqlFiles (#queriesDir config)
-  generate True host Nothing config migrations queries
+  generate serviceUrlSecure serviceUrlHost serviceUrlPort config migrations queries
 
-readArgs :: IO Text
+readArgs :: IO ServiceUrl.ServiceUrl
 readArgs =
   Optima.params "pgenie.io CLI app" $
-    ( Optima.param Nothing "server" $
-        Optima.value
-          "Service server"
-          (Optima.explicitlyRepresented id "pgenie.io")
+    Optima.param
+      Nothing
+      "service-url"
+      ( Optima.value
+          "Service URL (for development purposes)"
+          (Optima.explicitlyRepresented showAs def)
           Optima.unformatted
           Optima.implicitlyParsed
-    )
+      )
 
-loadSqlFiles :: Path -> IO [(Path, Text)]
+loadSqlFiles :: Path -> IO (BVec (Path, Text))
 loadSqlFiles dir =
-  Path.listDirectory dir >>= traverse load . sort . filter pred
+  Path.listDirectory dir
+    >>= traverse load . sort . filter pred
+    <&> fromList
   where
     pred path =
       case Path.extensions path of
@@ -46,8 +52,8 @@ generate ::
   Text ->
   Maybe Int ->
   Config.Project ->
-  [(Path, Text)] ->
-  [(Path, Text)] ->
+  (BVec (Path, Text)) ->
+  (BVec (Path, Text)) ->
   IO ()
 generate secure host port config migrations queries = do
   res <- Client.runHappily op secure host port
@@ -59,6 +65,9 @@ generate secure host port config migrations queries = do
     liftIO $ TextIO.writeFile (printCompactAs path) contents
   where
     op =
-      Client.process (#org config) (#name config) migrations queries
+      Client.process (#space config) (#name config) migrations queries artifacts
+      where
+        artifacts =
+          ConfigToProtocolMapping.artifacts (#artifacts config)
     nestPath path =
-      #outputDir config <> path
+      #artifactsDir config <> path
