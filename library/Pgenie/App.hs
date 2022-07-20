@@ -12,22 +12,43 @@ import qualified System.Directory as Directory
 
 main :: IO ()
 main = do
-  host <- readArgs
+  (host, port, secure) <- readArgs
   config <- Parsing.fileInDir mempty
   migrations <- loadSqlFiles (#migrationsDir config)
   queries <- loadSqlFiles (#queriesDir config)
-  generate True host Nothing config migrations queries
+  generate secure host port config migrations queries
 
-readArgs :: IO Text
+readArgs :: IO (Text, Maybe Int, Bool)
 readArgs =
   Optima.params "pgenie.io CLI app" $
-    ( Optima.param Nothing "server" $
-        Optima.value
-          "Service server"
-          (Optima.explicitlyRepresented id "pgenie.io")
-          Optima.unformatted
-          Optima.implicitlyParsed
-    )
+    (,,)
+      <$> Optima.param
+        Nothing
+        "service-host"
+        ( Optima.value
+            "Service host"
+            (Optima.explicitlyRepresented id "pgenie.io")
+            Optima.unformatted
+            Optima.implicitlyParsed
+        )
+      <*> optional
+        ( Optima.param
+            Nothing
+            "service-port"
+            ( Optima.value
+                "Service port"
+                Optima.defaultless
+                Optima.unformatted
+                Optima.implicitlyParsed
+            )
+        )
+      <*> ( Optima.param
+              Nothing
+              "service-insecure"
+              (Optima.flag "HTTP if present, HTTPS otherwise")
+              $> True
+              <|> pure False
+          )
 
 loadSqlFiles :: Path -> IO (BVec (Path, Text))
 loadSqlFiles dir =
