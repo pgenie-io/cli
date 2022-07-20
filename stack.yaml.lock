@@ -90,6 +90,13 @@ packages:
     hackage: cereal-data-dword-0.1.1
 - completed:
     pantry-tree:
+      sha256: c7b9df36feb75fe43c4e3804ba1eb61e37a39fa97173c5eed35245b17d10fd8e
+      size: 2622
+    hackage: hasql-1.6.0.1@sha256:adb92e68a3741f422a3bb776a12d5cf2bb83303778f343106f9a1cc2b4fcdf73,6628
+  original:
+    hackage: hasql-1.6.0.1
+- completed:
+    pantry-tree:
       sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
       size: 473
     hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
@@ -103,51 +110,51 @@ packages:
   original:
     hackage: timestamp-0.2
 - completed:
+    sha256: 76d425d9dd7565ae4a962ba1ebf6c1e71ca141b9fcc82fb053798ef39e77b4fb
     name: pgenie-protocol
+    size: 4197
+    url: https://github.com/pgenie-io/protocol/archive/f0298f5382572e3c4d23676cdb8c8ff7cf1c9efb.tar.gz
     pantry-tree:
       sha256: 6d499128fe4da0679dc4740dbf8d47bf116b1eb032507c722ad099dec68811ba
       size: 478
-    commit: f0298f5382572e3c4d23676cdb8c8ff7cf1c9efb
-    git: https://github.com/pgenie-io/protocol
     version: '0.1'
   original:
-    commit: f0298f5382572e3c4d23676cdb8c8ff7cf1c9efb
-    git: https://github.com/pgenie-io/protocol
+    url: https://github.com/pgenie-io/protocol/archive/f0298f5382572e3c4d23676cdb8c8ff7cf1c9efb.tar.gz
 - completed:
+    sha256: 90ff84d05a85a079680b10abe819ba4129f9d4962353cf3c69c67e83fc519abb
     name: pgenie-client
+    size: 4033
+    url: https://github.com/pgenie-io/client/archive/486a054f31aea8384d55eff7bed37dd9bb1c7af4.tar.gz
     pantry-tree:
       sha256: c089788bb5685df0beb4c4ffaef53496afa05d4644e10cd1eaa4151d773fb621
       size: 287
-    commit: 486a054f31aea8384d55eff7bed37dd9bb1c7af4
-    git: https://github.com/pgenie-io/client
     version: '0.1'
   original:
-    commit: 486a054f31aea8384d55eff7bed37dd9bb1c7af4
-    git: https://github.com/pgenie-io/client
+    url: https://github.com/pgenie-io/client/archive/486a054f31aea8384d55eff7bed37dd9bb1c7af4.tar.gz
 - completed:
+    sha256: 4f01536874f6aced3179ef54da92fe30cc64976033f1a118fbf4107f22d11fb4
     name: pgenie-config
+    size: 4565
+    url: https://github.com/pgenie-io/config/archive/6fe03edbcc8ebfae8f73d8095c34b36f54d9986c.tar.gz
     pantry-tree:
-      sha256: 8e2ad4e20e2273110f3b8d6d2f864da7b8daaffbd51814fa9bf3a0bdb78c5f52
-      size: 1146
-    commit: 6fe03edbcc8ebfae8f73d8095c34b36f54d9986c
-    git: https://github.com/pgenie-io/config
+      sha256: 277494810e5071a28bb10c1bc5e4f0eac8857e4fd467fbfa9ab04cf563dbae94
+      size: 684
     version: '0.1'
   original:
-    commit: 6fe03edbcc8ebfae8f73d8095c34b36f54d9986c
-    git: https://github.com/pgenie-io/config
+    url: https://github.com/pgenie-io/config/archive/6fe03edbcc8ebfae8f73d8095c34b36f54d9986c.tar.gz
 snapshots:
 - completed:
-    sha256: efddfb079a290eb4721a407fbc60dec91cc6dad054a13b80c94f649ef0ad4fa8
-    size: 463
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/5849b9946d1ea84a2f80da39b0bccd071e24eb9b/snapshot.yaml
+    sha256: 3a729440d42d062b306e83342db2ebfc7658eb4f16c88517f878c1302f2bc864
+    size: 472
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/aad96e7ba4a0cb09c79443bfa91aaf3b19996527/snapshot.yaml
   original:
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/5849b9946d1ea84a2f80da39b0bccd071e24eb9b/snapshot.yaml
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/aad96e7ba4a0cb09c79443bfa91aaf3b19996527/snapshot.yaml
 - completed:
-    sha256: 7fff185ddc9c3cf3782ed208aaac9f9285b845bfc163642f11d4173d9c758c20
-    size: 873
-    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/a80edde26f01c6dfd0bc5f35cd079aa13bf10ce4/snapshot.yaml
+    sha256: 672dcf6ea76091a1a33b43c82eaad33621abe79986a6e0c845ae666daf97da0d
+    size: 891
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/da3acf521911bb70d20fce5bbb34c6b1b525a837/snapshot.yaml
   original:
-    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/a80edde26f01c6dfd0bc5f35cd079aa13bf10ce4/snapshot.yaml
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/da3acf521911bb70d20fce5bbb34c6b1b525a837/snapshot.yaml
 - completed:
     sha256: 6a7d84094bf948100b933f83f8cff586a41633d59cb1adbb89eefc25405fabe8
     size: 616794
