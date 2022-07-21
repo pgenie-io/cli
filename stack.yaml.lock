@@ -132,23 +132,23 @@ packages:
   original:
     url: https://github.com/pgenie-io/client/archive/83b20bda879fc3d0237b75daa7a80f61892103aa.tar.gz
 - completed:
-    sha256: 4f01536874f6aced3179ef54da92fe30cc64976033f1a118fbf4107f22d11fb4
+    sha256: 170ceb68cf278685deff95af56b5e9ab3824f033ce5873116309c747ac20b30a
     name: pgenie-config
     size: 4565
-    url: https://github.com/pgenie-io/config/archive/6fe03edbcc8ebfae8f73d8095c34b36f54d9986c.tar.gz
+    url: https://github.com/pgenie-io/config/archive/a3677ca3235e360e4a3cf9df1e44c5c1259972ce.tar.gz
     pantry-tree:
-      sha256: 277494810e5071a28bb10c1bc5e4f0eac8857e4fd467fbfa9ab04cf563dbae94
+      sha256: 6b68be252d2e8b1f9f7219dd35fdba5f4c5ced6f87e6435f8d3a450d9ed1199b
       size: 684
     version: '0.1'
   original:
-    url: https://github.com/pgenie-io/config/archive/6fe03edbcc8ebfae8f73d8095c34b36f54d9986c.tar.gz
+    url: https://github.com/pgenie-io/config/archive/a3677ca3235e360e4a3cf9df1e44c5c1259972ce.tar.gz
 snapshots:
 - completed:
-    sha256: f6976960e432f153c9b114934450169f0c71695979ff7af3a3480726f6dca719
+    sha256: 2cb87fe12980e7d84fad450539f38073d0fa671fd46b515b82872db23450821c
     size: 472
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/c906fe5f4e173e1396e1edc572230a9e8c8b15ff/snapshot.yaml
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/9544ac6e563e340c7a1d3a09dd53c5b05f52b2f0/snapshot.yaml
   original:
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/c906fe5f4e173e1396e1edc572230a9e8c8b15ff/snapshot.yaml
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/9544ac6e563e340c7a1d3a09dd53c5b05f52b2f0/snapshot.yaml
 - completed:
     sha256: 672dcf6ea76091a1a33b43c82eaad33621abe79986a6e0c845ae666daf97da0d
     size: 891
