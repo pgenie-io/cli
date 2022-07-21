@@ -21,12 +21,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with: 
-          tag: ${{ steps.get-metadata.outputs.version }}
+          tag: v${{ steps.get-metadata.outputs.version }}
       - name: Fail if tag exists
         run: |
           if [ ${{ steps.check-tag.outputs.exists }} == true ]
           then
-            echo "Tag ${{ steps.get-metadata.outputs.version }} already exists"
+            echo "Tag v${{ steps.get-metadata.outputs.version }} already exists"
             exit 1
           fi
 
