@@ -121,16 +121,16 @@ packages:
   original:
     url: https://github.com/pgenie-io/protocol/archive/f0298f5382572e3c4d23676cdb8c8ff7cf1c9efb.tar.gz
 - completed:
-    sha256: 90ff84d05a85a079680b10abe819ba4129f9d4962353cf3c69c67e83fc519abb
+    sha256: 5dc3f4c859dacccec60e879e0007a9b36a14dd546fa341f206e5a5350e1a2beb
     name: pgenie-client
-    size: 4033
-    url: https://github.com/pgenie-io/client/archive/486a054f31aea8384d55eff7bed37dd9bb1c7af4.tar.gz
+    size: 3802
+    url: https://github.com/pgenie-io/client/archive/83b20bda879fc3d0237b75daa7a80f61892103aa.tar.gz
     pantry-tree:
-      sha256: c089788bb5685df0beb4c4ffaef53496afa05d4644e10cd1eaa4151d773fb621
+      sha256: bdf83f2063ae56e675ceaeac4114da11c004b19a4216352738b7da5c26630233
       size: 287
     version: '0.1'
   original:
-    url: https://github.com/pgenie-io/client/archive/486a054f31aea8384d55eff7bed37dd9bb1c7af4.tar.gz
+    url: https://github.com/pgenie-io/client/archive/83b20bda879fc3d0237b75daa7a80f61892103aa.tar.gz
 - completed:
     sha256: 4f01536874f6aced3179ef54da92fe30cc64976033f1a118fbf4107f22d11fb4
     name: pgenie-config
@@ -144,11 +144,11 @@ packages:
     url: https://github.com/pgenie-io/config/archive/6fe03edbcc8ebfae8f73d8095c34b36f54d9986c.tar.gz
 snapshots:
 - completed:
-    sha256: 3a729440d42d062b306e83342db2ebfc7658eb4f16c88517f878c1302f2bc864
+    sha256: f6976960e432f153c9b114934450169f0c71695979ff7af3a3480726f6dca719
     size: 472
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/aad96e7ba4a0cb09c79443bfa91aaf3b19996527/snapshot.yaml
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/c906fe5f4e173e1396e1edc572230a9e8c8b15ff/snapshot.yaml
   original:
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/aad96e7ba4a0cb09c79443bfa91aaf3b19996527/snapshot.yaml
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/c906fe5f4e173e1396e1edc572230a9e8c8b15ff/snapshot.yaml
 - completed:
     sha256: 672dcf6ea76091a1a33b43c82eaad33621abe79986a6e0c845ae666daf97da0d
     size: 891
