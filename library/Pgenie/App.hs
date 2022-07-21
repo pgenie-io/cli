@@ -56,7 +56,19 @@ generate ::
   (BVec (Path, Text)) ->
   IO ()
 generate secure host port config migrations queries = do
-  res <- Client.runHappily op secure host port
+  res <- Client.run op secure host port
+  res <- case res of
+    Left err -> case err of
+      Client.TimeoutErr -> die [i|Failure connecting to $host|]
+      Client.NetworkErr _ -> die [i|Failure connecting to $host|]
+      Client.ResponseParsingErr _ ->
+        die
+          [i|
+            Unexpected response from $host.
+            You probably need to update this app.
+            Visit https://github.com/pgenie-io/app for installation instructions.
+          |]
+    Right res -> return res
   results <- case res of
     Left err -> die (to err)
     Right res -> return res
