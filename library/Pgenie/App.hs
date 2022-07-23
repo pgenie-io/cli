@@ -4,7 +4,6 @@ import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
 import qualified Optima
-import qualified Pgenie.App.ConfigToProtocolMapping as ConfigToProtocolMapping
 import qualified Pgenie.App.ServiceUrl as ServiceUrl
 import qualified Pgenie.Client as Client
 import qualified Pgenie.Config.Model as Config
@@ -77,9 +76,11 @@ generate secure host port config migrations queries = do
     liftIO $ TextIO.writeFile (printCompactAs path) contents
   where
     op =
-      Client.process (#space config) (#name config) migrations queries artifacts
-      where
-        artifacts =
-          ConfigToProtocolMapping.artifacts (#artifacts config)
+      Client.process
+        (#space config)
+        (#name config)
+        migrations
+        queries
+        (fromList . toList . #artifacts $ config)
     nestPath path =
       #artifactsDir config <> path

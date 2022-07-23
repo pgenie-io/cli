@@ -36,7 +36,6 @@ library
   exposed-modules:
     Pgenie.App
   other-modules:
-    Pgenie.App.ConfigToProtocolMapping
     Pgenie.App.ServiceUrl
 
 test-suite test
