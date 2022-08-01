@@ -5,78 +5,78 @@
 
 packages:
 - completed:
-    name: coalmine
-    pantry-tree:
-      sha256: e421d8599d9471cd7a261dace2fc65adaf146946d08533239a6c56fd1d7c9728
-      size: 9639
-    commit: 394ba4935cc1e9927da49b4189ff09b9c9058ab1
-    git: https://github.com/nikita-volkov/coalmine
-    version: 0.1.0.5
-  original:
-    commit: 394ba4935cc1e9927da49b4189ff09b9c9058ab1
-    git: https://github.com/nikita-volkov/coalmine
-- completed:
-    name: moore-machines
-    pantry-tree:
-      sha256: 3d1505067d5c8599e9843ed45ec2bc587fa5100c448f558ca5db2c97fb55706f
-      size: 887
-    commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
-    git: https://github.com/nikita-volkov/moore-machines
-    version: '0.1'
-  original:
-    commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
-    git: https://github.com/nikita-volkov/moore-machines
-- completed:
-    name: structure-kit
-    pantry-tree:
-      sha256: b7779ebe935d65c0b4f6e3ea8b5f5011abdabf362b1673826545c93625e050ad
-      size: 3500
-    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
-    git: https://github.com/nikita-volkov/structure-kit
-    version: 0.1.0.1
-  original:
-    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
-    git: https://github.com/nikita-volkov/structure-kit
-- completed:
-    name: canapi
-    pantry-tree:
-      sha256: 54c44986c3d7f8daa4464e4e097f312dc3ac0c02f7eb5fbb8bba3a6e6d19487a
-      size: 1319
-    commit: 02f1d9ffea90522a3a0968305793a7f507c7da59
-    git: https://github.com/nikita-volkov/canapi
-    version: '0.1'
-  original:
-    commit: 02f1d9ffea90522a3a0968305793a7f507c7da59
-    git: https://github.com/nikita-volkov/canapi
-- completed:
-    name: lean-http-client
-    pantry-tree:
-      sha256: 64da0f3390166969e2fe6a140d847c315258f9bcb8fcaf3169fd78b4b25b6f6f
-      size: 544
-    commit: 52343895df1e5ae49159b8c5f76a50ac438216b1
-    git: https://github.com/nikita-volkov/lean-http-client
-    version: '0.1'
-  original:
-    commit: 52343895df1e5ae49159b8c5f76a50ac438216b1
-    git: https://github.com/nikita-volkov/lean-http-client
-- completed:
-    name: distillery
-    pantry-tree:
-      sha256: 03d32965a35914b68bdaa149db48ce66e774783360f5b7d8b18db72de61b7baf
-      size: 524
-    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
-    git: https://github.com/nikita-volkov/distillery
-    version: '0.1'
-  original:
-    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
-    git: https://github.com/nikita-volkov/distillery
-- completed:
     pantry-tree:
       sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
       size: 473
     hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
   original:
     hackage: punycode-2.0
+- completed:
+    sha256: cb5603dced8ecf0452cd98df2587f23b795d3c73ac56e5f1f9278ef0dadce4cd
+    name: canapi
+    size: 13379
+    url: https://github.com/nikita-volkov/canapi/archive/02f1d9ffea90522a3a0968305793a7f507c7da59.tar.gz
+    pantry-tree:
+      sha256: 54c44986c3d7f8daa4464e4e097f312dc3ac0c02f7eb5fbb8bba3a6e6d19487a
+      size: 1319
+    version: '0.1'
+  original:
+    url: https://github.com/nikita-volkov/canapi/archive/02f1d9ffea90522a3a0968305793a7f507c7da59.tar.gz
+- completed:
+    sha256: e39a72f504b667fa32d7e4a76124d07695d289e4bd935555db864d4342d495a4
+    name: coalmine
+    size: 54136
+    url: https://github.com/nikita-volkov/coalmine/archive/394ba4935cc1e9927da49b4189ff09b9c9058ab1.tar.gz
+    pantry-tree:
+      sha256: e421d8599d9471cd7a261dace2fc65adaf146946d08533239a6c56fd1d7c9728
+      size: 9639
+    version: 0.1.0.5
+  original:
+    url: https://github.com/nikita-volkov/coalmine/archive/394ba4935cc1e9927da49b4189ff09b9c9058ab1.tar.gz
+- completed:
+    sha256: 58b990d08a9c79ca8893c6d36b9a84f4ad50c6eab7003a706856025de8004feb
+    name: distillery
+    size: 5555
+    url: https://github.com/nikita-volkov/distillery/archive/2c2905f2addb0d1925c43d427fcf65340ee64b2a.tar.gz
+    pantry-tree:
+      sha256: 03d32965a35914b68bdaa149db48ce66e774783360f5b7d8b18db72de61b7baf
+      size: 524
+    version: '0.1'
+  original:
+    url: https://github.com/nikita-volkov/distillery/archive/2c2905f2addb0d1925c43d427fcf65340ee64b2a.tar.gz
+- completed:
+    sha256: 5fed90107db0d87be0ea190d2f2ce260e24c212b6cdce6f53566f4b57f42fc7c
+    name: lean-http-client
+    size: 10129
+    url: https://github.com/nikita-volkov/lean-http-client/archive/52343895df1e5ae49159b8c5f76a50ac438216b1.tar.gz
+    pantry-tree:
+      sha256: 64da0f3390166969e2fe6a140d847c315258f9bcb8fcaf3169fd78b4b25b6f6f
+      size: 544
+    version: '0.1'
+  original:
+    url: https://github.com/nikita-volkov/lean-http-client/archive/52343895df1e5ae49159b8c5f76a50ac438216b1.tar.gz
+- completed:
+    sha256: 412ad5ec4f887fbbb77afd2b273a44a320b3e6f044c6382bd59c572b6f69a3f1
+    name: moore-machines
+    size: 8284
+    url: https://github.com/nikita-volkov/moore-machines/archive/7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290.tar.gz
+    pantry-tree:
+      sha256: 3d1505067d5c8599e9843ed45ec2bc587fa5100c448f558ca5db2c97fb55706f
+      size: 887
+    version: '0.1'
+  original:
+    url: https://github.com/nikita-volkov/moore-machines/archive/7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290.tar.gz
+- completed:
+    sha256: 2e5b01ebcbc4ec1371d2014cb04307a63239148f73a0bed55bf418e20e654ce9
+    name: structure-kit
+    size: 41529
+    url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
+    pantry-tree:
+      sha256: b7779ebe935d65c0b4f6e3ea8b5f5011abdabf362b1673826545c93625e050ad
+      size: 3500
+    version: 0.1.0.1
+  original:
+    url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
 - completed:
     sha256: da4fbcc367af4a7a1aae0068724be7ebcd1ad60ba4a256b727ce84df6d9daf5c
     name: pgenie-api

@@ -1,17 +1,11 @@
 resolver: nightly-2022-07-16
 extra-deps:
-  - git: https://github.com/nikita-volkov/coalmine
-    commit: 394ba4935cc1e9927da49b4189ff09b9c9058ab1
-  - git: https://github.com/nikita-volkov/moore-machines
-    commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
-  - git: https://github.com/nikita-volkov/structure-kit
-    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
-  - git: https://github.com/nikita-volkov/canapi
-    commit: 02f1d9ffea90522a3a0968305793a7f507c7da59
-  - git: https://github.com/nikita-volkov/lean-http-client
-    commit: 52343895df1e5ae49159b8c5f76a50ac438216b1
-  - git: https://github.com/nikita-volkov/distillery
-    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
   - punycode-2.0
+  - url: https://github.com/nikita-volkov/canapi/archive/02f1d9ffea90522a3a0968305793a7f507c7da59.tar.gz
+  - url: https://github.com/nikita-volkov/coalmine/archive/394ba4935cc1e9927da49b4189ff09b9c9058ab1.tar.gz
+  - url: https://github.com/nikita-volkov/distillery/archive/2c2905f2addb0d1925c43d427fcf65340ee64b2a.tar.gz
+  - url: https://github.com/nikita-volkov/lean-http-client/archive/52343895df1e5ae49159b8c5f76a50ac438216b1.tar.gz
+  - url: https://github.com/nikita-volkov/moore-machines/archive/7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290.tar.gz
+  - url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
   - url: https://github.com/pgenie-io/api/archive/ab43e904b16e0c76976f58711b56cf86360dc8fe.tar.gz
   - url: https://github.com/pgenie-io/config/archive/3adafa4ef253a9c73cc2b4a574331810a377bf5b.tar.gz
