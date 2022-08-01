@@ -1,6 +1,6 @@
 cabal-version: 3.0
 
-name: pgenie-app
+name: pgenie-cli
 version: 1.0.0
 
 common base-settings
@@ -23,20 +23,20 @@ common executable-settings
     -threaded
     "-with-rtsopts=-N -I0 -qg"
   build-depends:
-    pgenie-app,
+    pgenie-cli,
 
 common test-settings
   import: base-settings
   build-depends:
-    pgenie-app,
+    pgenie-cli,
 
 library
   import: base-settings
   hs-source-dirs: library
   exposed-modules:
-    Pgenie.App
+    Pgenie.Cli
   other-modules:
-    Pgenie.App.ServiceUrl
+    Pgenie.Cli.ServiceUrl
 
 test-suite test
   import: test-settings

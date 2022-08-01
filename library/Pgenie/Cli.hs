@@ -1,10 +1,10 @@
-module Pgenie.App (main) where
+module Pgenie.Cli (main) where
 
 import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
 import qualified Optima
-import qualified Pgenie.App.ServiceUrl as ServiceUrl
+import qualified Pgenie.Cli.ServiceUrl as ServiceUrl
 import qualified Pgenie.Client as Client
 import qualified Pgenie.Config.Model as Config
 import qualified Pgenie.Config.Parsing as Parsing
@@ -65,7 +65,7 @@ generate secure host port config migrations queries = do
           [i|
             Unexpected response from $host.
             You probably need to update this app.
-            Visit https://github.com/pgenie-io/app for installation instructions.
+            Visit https://github.com/pgenie-io/cli for installation instructions.
           |]
     Right res -> return res
   results <- case res of

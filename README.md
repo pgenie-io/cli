@@ -4,7 +4,7 @@ CLI application for building Pgenie projects.
 
 # Installation
 
-Precompiled binaries are available for all major platforms. [Download the according binary](https://github.com/pgenie-io/app/releases/latest) and place it on your PATH. E.g., `/usr/local/bin`.
+Precompiled binaries are available for all major platforms. [Download the according binary](https://github.com/pgenie-io/cli/releases/latest) and place it on your PATH. E.g., `/usr/local/bin`.
 
 If your platform is not available, you can build from source. 
 

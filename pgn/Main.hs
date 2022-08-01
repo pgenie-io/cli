@@ -1,6 +1,5 @@
 module Main where
 
-import Coalmine.Prelude
-import qualified Pgenie.App as App
+import qualified Pgenie.Cli as App
 
 main = App.main

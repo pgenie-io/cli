@@ -1,4 +1,4 @@
-module Pgenie.App.ServiceUrl where
+module Pgenie.Cli.ServiceUrl where
 
 import Coalmine.Prelude
 import Data.Attoparsec.Text
