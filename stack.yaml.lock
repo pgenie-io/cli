@@ -101,7 +101,7 @@ packages:
     url: https://github.com/pgenie-io/config/archive/3adafa4ef253a9c73cc2b4a574331810a377bf5b.tar.gz
 snapshots:
 - completed:
-    sha256: 6a7d84094bf948100b933f83f8cff586a41633d59cb1adbb89eefc25405fabe8
-    size: 616794
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/16.yaml
-  original: nightly-2022-07-16
+    sha256: f493859c3ff97bbe56657807ed8037ceacb38d179e13fc265ee314ee3767fcf3
+    size: 619216
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/31.yaml
+  original: nightly-2022-07-31
