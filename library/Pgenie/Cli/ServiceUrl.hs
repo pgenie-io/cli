@@ -21,7 +21,7 @@ instance LenientParser ServiceUrl where
     return $ ServiceUrl secure host port
 
 instance Default ServiceUrl where
-  def = ServiceUrl True "pgenie.io" Nothing
+  def = ServiceUrl True "api.pgenie.io" Nothing
 
 instance Show ServiceUrl where
   show = to . toCompactBuilder

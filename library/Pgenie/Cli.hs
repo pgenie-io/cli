@@ -4,8 +4,8 @@ import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
 import qualified Optima
+import qualified Pgenie.Api.Client as Client
 import qualified Pgenie.Cli.ServiceUrl as ServiceUrl
-import qualified Pgenie.Client as Client
 import qualified Pgenie.Config.Model as Config
 import qualified Pgenie.Config.Parsing as Parsing
 import qualified System.Directory as Directory

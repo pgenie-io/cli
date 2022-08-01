@@ -7,13 +7,13 @@ packages:
 - completed:
     name: coalmine
     pantry-tree:
-      sha256: 8896e428a656c392d25d499f9b024abd0c30459db09e8a78e1645bad43d4fb89
-      size: 9564
-    commit: a2857feca4d8a25bd868e0a4ff985b7ef4db6ec3
+      sha256: e421d8599d9471cd7a261dace2fc65adaf146946d08533239a6c56fd1d7c9728
+      size: 9639
+    commit: 394ba4935cc1e9927da49b4189ff09b9c9058ab1
     git: https://github.com/nikita-volkov/coalmine
-    version: 0.1.0.4
+    version: 0.1.0.5
   original:
-    commit: a2857feca4d8a25bd868e0a4ff985b7ef4db6ec3
+    commit: 394ba4935cc1e9927da49b4189ff09b9c9058ab1
     git: https://github.com/nikita-volkov/coalmine
 - completed:
     name: moore-machines
@@ -110,27 +110,16 @@ packages:
   original:
     hackage: timestamp-0.2
 - completed:
-    sha256: 60ac96f3c5210b78b81c5cea3c8aafe905bd0b70f21a85eb34443874266dcdc4
-    name: pgenie-protocol
-    size: 4559
-    url: https://github.com/pgenie-io/protocol/archive/2002a6f8ea6e7a612a9bddba8b359b36c88736c6.tar.gz
+    sha256: da4fbcc367af4a7a1aae0068724be7ebcd1ad60ba4a256b727ce84df6d9daf5c
+    name: pgenie-api
+    size: 5770
+    url: https://github.com/pgenie-io/api/archive/ab43e904b16e0c76976f58711b56cf86360dc8fe.tar.gz
     pantry-tree:
-      sha256: a8f26442cd8e9041969551bdbcf7d453e5f5921b66bc75e594ee19b281ca9a30
-      size: 478
+      sha256: 65b35a07ffc76b87a56f18696b2e3778820303f4ff51019d58c0ab9e30261e0e
+      size: 631
     version: '0.1'
   original:
-    url: https://github.com/pgenie-io/protocol/archive/2002a6f8ea6e7a612a9bddba8b359b36c88736c6.tar.gz
-- completed:
-    sha256: 5bb387aa146608e5a0aaade0c0cf70c0982d00f14bf716674bd9ec0376fea007
-    name: pgenie-client
-    size: 4247
-    url: https://github.com/pgenie-io/client/archive/e5e036786b0829fa7492fc1cc014d6becf10ae9d.tar.gz
-    pantry-tree:
-      sha256: 60c9f0673fd4438fca9024d116b1ea55bd2a1d757f50630813ddaae33c54063b
-      size: 287
-    version: '0.1'
-  original:
-    url: https://github.com/pgenie-io/client/archive/e5e036786b0829fa7492fc1cc014d6becf10ae9d.tar.gz
+    url: https://github.com/pgenie-io/api/archive/ab43e904b16e0c76976f58711b56cf86360dc8fe.tar.gz
 - completed:
     sha256: b25a04051cacf9d426d65770e4e7ba42d973f3e4e64d9f1cccd269208a5b2d51
     name: pgenie-config
@@ -144,19 +133,19 @@ packages:
     url: https://github.com/pgenie-io/config/archive/3adafa4ef253a9c73cc2b4a574331810a377bf5b.tar.gz
 snapshots:
 - completed:
-    sha256: 591c7a456af8db8369ea1524b2664d318ad06e1a18081eb621c3b145e72148d6
-    size: 472
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/46282ea26d9fce5039dfa6e63a7a90d11eb7e0a3/snapshot.yaml
+    sha256: a6788669f929c72eac5ba473d444c3f23a49198f7b074dc2c5f269635861ffa4
+    size: 366
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/8232e69a47f1e5dcbb5e3d40ad18541a1fa5be33/snapshot.yaml
   original:
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/46282ea26d9fce5039dfa6e63a7a90d11eb7e0a3/snapshot.yaml
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/8232e69a47f1e5dcbb5e3d40ad18541a1fa5be33/snapshot.yaml
 - completed:
-    sha256: 672dcf6ea76091a1a33b43c82eaad33621abe79986a6e0c845ae666daf97da0d
+    sha256: de19114a4f4eb32bdc91d67abb01f8c5c6da9747b7c178b883b9c2369293421d
     size: 891
-    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/da3acf521911bb70d20fce5bbb34c6b1b525a837/snapshot.yaml
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/33cedc9f273a754e2db2e1beef1221c33df29c39/snapshot.yaml
   original:
-    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/da3acf521911bb70d20fce5bbb34c6b1b525a837/snapshot.yaml
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/33cedc9f273a754e2db2e1beef1221c33df29c39/snapshot.yaml
 - completed:
-    sha256: 6a7d84094bf948100b933f83f8cff586a41633d59cb1adbb89eefc25405fabe8
-    size: 616794
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/16.yaml
-  original: nightly-2022-07-16
+    sha256: f493859c3ff97bbe56657807ed8037ceacb38d179e13fc265ee314ee3767fcf3
+    size: 619216
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/31.yaml
+  original: nightly-2022-07-31
