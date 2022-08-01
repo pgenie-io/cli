@@ -71,44 +71,12 @@ packages:
     commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
     git: https://github.com/nikita-volkov/distillery
 - completed:
-    name: acquire
-    pantry-tree:
-      sha256: e194150d070a0e4f07e5f2285e82f177312f328c7490f3a659f361b4f6324d00
-      size: 438
-    commit: 75194757308ae9340b0e2eda46d8db4d25af7516
-    git: https://github.com/metrix-ai/acquire
-    version: 0.3.1
-  original:
-    commit: 75194757308ae9340b0e2eda46d8db4d25af7516
-    git: https://github.com/metrix-ai/acquire
-- completed:
-    pantry-tree:
-      sha256: 520aa5f59b55c14d27115a801f499f940a563849b0c54876bcd6be41f6450713
-      size: 456
-    hackage: cereal-data-dword-0.1.1@sha256:a3fa6dfafaeeb3774c5888dfa601d561ce05b0af66f52859970247e58135d47e,1381
-  original:
-    hackage: cereal-data-dword-0.1.1
-- completed:
-    pantry-tree:
-      sha256: c7b9df36feb75fe43c4e3804ba1eb61e37a39fa97173c5eed35245b17d10fd8e
-      size: 2622
-    hackage: hasql-1.6.0.1@sha256:adb92e68a3741f422a3bb776a12d5cf2bb83303778f343106f9a1cc2b4fcdf73,6628
-  original:
-    hackage: hasql-1.6.0.1
-- completed:
     pantry-tree:
       sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
       size: 473
     hackage: punycode-2.0@sha256:dce7f481b5eedc750cf49d21a80b839cb366afd2d29bc506acca5ad9d0c06a8f,1503
   original:
     hackage: punycode-2.0
-- completed:
-    pantry-tree:
-      sha256: 51dc0ab22269973eec829ae476fb3102cfe155ffde2fd1d039dedf65c7842031
-      size: 509
-    hackage: timestamp-0.2@sha256:103fe49ce206922d3b14d57d8aff25eaf03c70fef5fcdaeaeb8416aaee163e51,1598
-  original:
-    hackage: timestamp-0.2
 - completed:
     sha256: da4fbcc367af4a7a1aae0068724be7ebcd1ad60ba4a256b727ce84df6d9daf5c
     name: pgenie-api
@@ -133,19 +101,7 @@ packages:
     url: https://github.com/pgenie-io/config/archive/3adafa4ef253a9c73cc2b4a574331810a377bf5b.tar.gz
 snapshots:
 - completed:
-    sha256: a6788669f929c72eac5ba473d444c3f23a49198f7b074dc2c5f269635861ffa4
-    size: 366
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/8232e69a47f1e5dcbb5e3d40ad18541a1fa5be33/snapshot.yaml
-  original:
-    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/8232e69a47f1e5dcbb5e3d40ad18541a1fa5be33/snapshot.yaml
-- completed:
-    sha256: de19114a4f4eb32bdc91d67abb01f8c5c6da9747b7c178b883b9c2369293421d
-    size: 891
-    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/33cedc9f273a754e2db2e1beef1221c33df29c39/snapshot.yaml
-  original:
-    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/33cedc9f273a754e2db2e1beef1221c33df29c39/snapshot.yaml
-- completed:
-    sha256: f493859c3ff97bbe56657807ed8037ceacb38d179e13fc265ee314ee3767fcf3
-    size: 619216
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/31.yaml
-  original: nightly-2022-07-31
+    sha256: 6a7d84094bf948100b933f83f8cff586a41633d59cb1adbb89eefc25405fabe8
+    size: 616794
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/16.yaml
+  original: nightly-2022-07-16
