@@ -12,8 +12,8 @@ common base-settings
     directory,
     optima,
     pgenie-api,
-    pgenie-config,
     rerebase,
+    safe,
 
 common executable-settings
   import: base-settings
@@ -35,6 +35,7 @@ library
   exposed-modules:
     Pgenie.Cli
   other-modules:
+    Pgenie.Cli.ConfigFilesListing
     Pgenie.Cli.ServiceUrl
 
 test-suite test

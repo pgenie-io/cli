@@ -5,18 +5,17 @@ import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
 import qualified Optima
 import qualified Pgenie.Api.Client as Client
+import qualified Pgenie.Cli.ConfigFilesListing as ConfigFilesListing
 import qualified Pgenie.Cli.ServiceUrl as ServiceUrl
-import qualified Pgenie.Config.Model as Config
-import qualified Pgenie.Config.Parsing as Parsing
 import qualified System.Directory as Directory
 
 main :: IO ()
 main = do
   ServiceUrl.ServiceUrl {..} <- readArgs
-  config <- Parsing.fileInDir mempty
-  migrations <- loadSqlFiles (#migrationsDir config)
-  queries <- loadSqlFiles (#queriesDir config)
-  generate serviceUrlSecure serviceUrlHost serviceUrlPort config migrations queries
+  (configVersion, configPath, configContents) <- ConfigFilesListing.chooseAndReadConfigHappily
+  migrations <- loadSqlFiles "migrations"
+  queries <- loadSqlFiles "queries"
+  generate serviceUrlSecure serviceUrlHost serviceUrlPort configVersion configContents migrations queries
 
 readArgs :: IO ServiceUrl.ServiceUrl
 readArgs =
@@ -50,11 +49,12 @@ generate ::
   Bool ->
   Text ->
   Maybe Int ->
-  Config.Project ->
+  Word ->
+  Text ->
   (BVec (Path, Text)) ->
   (BVec (Path, Text)) ->
   IO ()
-generate secure host port config migrations queries = do
+generate secure host port configVersion configContents migrations queries = do
   res <- Client.run op secure host port
   res <- case res of
     Left err -> case err of
@@ -77,10 +77,9 @@ generate secure host port config migrations queries = do
   where
     op =
       Client.process
-        (#space config)
-        (#name config)
+        configVersion
+        configContents
         migrations
         queries
-        (fromList . toList . #artifacts $ config)
     nestPath path =
-      #artifactsDir config <> path
+      "artifacts" <> path

@@ -78,30 +78,19 @@ packages:
   original:
     url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
 - completed:
-    sha256: da4fbcc367af4a7a1aae0068724be7ebcd1ad60ba4a256b727ce84df6d9daf5c
+    sha256: 588d7e32f7f4737c6d0a64bfb9bccec2c160b7746a024dcf524daac509c89bed
     name: pgenie-api
-    size: 5770
-    url: https://github.com/pgenie-io/api/archive/ab43e904b16e0c76976f58711b56cf86360dc8fe.tar.gz
+    size: 5107
+    url: https://github.com/pgenie-io/api/archive/d9cea1c2c641fc7626c21920a7be19963848a680.tar.gz
     pantry-tree:
-      sha256: 65b35a07ffc76b87a56f18696b2e3778820303f4ff51019d58c0ab9e30261e0e
+      sha256: 0c17bce363761cc321ccf2b305c37d0847150ecd3b6c85bb14d8ced6ba702ecf
       size: 631
     version: '0.1'
   original:
-    url: https://github.com/pgenie-io/api/archive/ab43e904b16e0c76976f58711b56cf86360dc8fe.tar.gz
-- completed:
-    sha256: b25a04051cacf9d426d65770e4e7ba42d973f3e4e64d9f1cccd269208a5b2d51
-    name: pgenie-config
-    size: 5299
-    url: https://github.com/pgenie-io/config/archive/3adafa4ef253a9c73cc2b4a574331810a377bf5b.tar.gz
-    pantry-tree:
-      sha256: 97ebbef14cd992bcb820ecc775aeffa45eb275a5193a80db99f6cb9171a41dd9
-      size: 684
-    version: '0.1'
-  original:
-    url: https://github.com/pgenie-io/config/archive/3adafa4ef253a9c73cc2b4a574331810a377bf5b.tar.gz
+    url: https://github.com/pgenie-io/api/archive/d9cea1c2c641fc7626c21920a7be19963848a680.tar.gz
 snapshots:
 - completed:
-    sha256: 6a7d84094bf948100b933f83f8cff586a41633d59cb1adbb89eefc25405fabe8
-    size: 616794
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/7/16.yaml
-  original: nightly-2022-07-16
+    sha256: 656fa7a1ff5ddd147cce5a0aabd6fd70255f2ac60fd1294a1228b00a19b1731f
+    size: 628888
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/nightly/2022/8/4.yaml
+  original: nightly-2022-08-04
