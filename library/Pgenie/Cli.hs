@@ -3,7 +3,9 @@ module Pgenie.Cli (main) where
 import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
+import qualified Data.Version as Version
 import qualified Optima
+import qualified Paths_pgenie_cli as CabalMetadata
 import qualified Pgenie.Api.Client as Client
 import qualified Pgenie.Cli.ConfigFilesListing as ConfigFilesListing
 import qualified Pgenie.Cli.ServiceUrl as ServiceUrl
@@ -77,9 +79,16 @@ generate secure host port configVersion configContents migrations queries = do
   where
     op =
       Client.process
+        clientVersion
         configVersion
         configContents
         migrations
         queries
     nestPath path =
       "artifacts" <> path
+
+clientVersion :: Text
+clientVersion =
+  CabalMetadata.version
+    & Version.showVersion
+    & to @Text

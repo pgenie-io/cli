@@ -35,6 +35,7 @@ library
   exposed-modules:
     Pgenie.Cli
   other-modules:
+    Paths_pgenie_cli
     Pgenie.Cli.ConfigFilesListing
     Pgenie.Cli.ServiceUrl
 
