@@ -61,13 +61,13 @@ generate secure host port configVersion configContents migrations queries = do
   res <- Client.run op secure host port
   res <- case res of
     Left err -> case err of
-      Client.TimeoutErr -> die [i|Failure connecting to $host|]
-      Client.NetworkErr _ -> die [i|Failure connecting to $host|]
+      Client.TimeoutErr -> die [i|Timed out connecting to $host|]
+      Client.NetworkErr _ -> die [i|Failed to connect to $host|]
       Client.ResponseParsingErr _ ->
         die
           [i|
-            Unexpected response from $host.
-            You probably need to update this app.
+            Got unexpected response from $host.
+            You probably need to update pGenie CLI.
             Visit https://github.com/pgenie-io/cli for installation instructions.
           |]
     Right res -> return res
