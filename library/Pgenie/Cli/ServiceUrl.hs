@@ -1,7 +1,7 @@
 module Pgenie.Cli.ServiceUrl where
 
 import Coalmine.Prelude
-import Data.Attoparsec.Text
+import qualified Data.Attoparsec.Text as Attoparsec
 
 data ServiceUrl = ServiceUrl
   { serviceUrlSecure :: !Bool,
@@ -11,11 +11,11 @@ data ServiceUrl = ServiceUrl
 
 instance LenientParser ServiceUrl where
   lenientParser = do
-    string "http"
-    secure <- char 's' $> True <|> pure False
-    string "://"
-    host <- takeWhile1 (\c -> c /= '/' && c /= ':')
-    colon <- char ':' $> True <|> pure False
+    Attoparsec.string "http"
+    secure <- Attoparsec.char 's' $> True <|> pure False
+    Attoparsec.string "://"
+    host <- Attoparsec.takeWhile1 (\c -> c /= '/' && c /= ':')
+    colon <- Attoparsec.char ':' $> True <|> pure False
     port <- if colon then Just <$> lenientParser else pure Nothing
 
     return $ ServiceUrl secure host port
