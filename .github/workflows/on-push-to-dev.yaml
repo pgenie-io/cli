@@ -9,11 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/cache@v3
-        with:
-          path: ~/.stack
-          key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
-          restore-keys: ${{ runner.os }}-
+      - uses: freckle/stack-cache-action@v2.0.3
       - run: stack install
       - uses: actions/checkout@v3
         with:
