@@ -1,0 +1,22 @@
+
+on:
+  push: 
+    branches:
+      - dev
+
+jobs:
+  test-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: ~/.stack
+          key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
+          restore-keys: ${{ runner.os }}-
+      - run: stack install
+      - uses: actions/checkout@v3
+        with:
+          repository: pgenie-io/demo
+          ref: 5af33c319fc5ad20a5617a88a60c539f1171d9cb
+      - run: pgn
