@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - master
-      - dev
 
 jobs:
   get-metadata:
@@ -24,7 +23,6 @@ jobs:
         with: 
           tag: v${{ steps.get-metadata.outputs.version }}
       - name: Fail if tag exists
-        if: github.ref == 'refs/heads/master'
         run: |
           if [ ${{ steps.check-tag.outputs.exists }} == true ]
           then
@@ -144,7 +142,6 @@ jobs:
       - run: pgn
 
   release:
-    if: github.ref == 'refs/heads/master'
     needs:
       - get-metadata
       - build-linux-artifact
