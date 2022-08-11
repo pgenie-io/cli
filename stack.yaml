@@ -7,4 +7,4 @@ extra-deps:
   - url: https://github.com/nikita-volkov/lean-http-client/archive/52343895df1e5ae49159b8c5f76a50ac438216b1.tar.gz
   - url: https://github.com/nikita-volkov/moore-machines/archive/7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290.tar.gz
   - url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
-  - url: https://github.com/pgenie-io/api/archive/bbd1140c27887f4a2e95d634786c92704f978adf.tar.gz
+  - url: https://github.com/pgenie-io/api/archive/f8673662aeae11602931035cb7222e75f6144e9a.tar.gz

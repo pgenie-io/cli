@@ -78,16 +78,16 @@ packages:
   original:
     url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
 - completed:
-    sha256: fe987d5b19fbd3441f2e9f3b355c5b20912671e19be7a6bc6fecb2b64fd53ba2
+    sha256: 373dc3befcd32e5ac6178d2eda5a892c346a67be4b6e681b0c4e87a638611177
     name: pgenie-api
-    size: 5201
-    url: https://github.com/pgenie-io/api/archive/bbd1140c27887f4a2e95d634786c92704f978adf.tar.gz
+    size: 5698
+    url: https://github.com/pgenie-io/api/archive/67cb57a9e0a3a73288f4e5b203c25701b3db0689.tar.gz
     pantry-tree:
-      sha256: 208d4e3e54b54a56ede85f371ca61d53e13fc6d458bc7877a77b2aa02ccfb898
-      size: 634
+      sha256: 9ce4d593053a47fec3320793dfcbd9d8f9976f5466fa56e1d83b7f91563ccc0a
+      size: 714
     version: '0.1'
   original:
-    url: https://github.com/pgenie-io/api/archive/bbd1140c27887f4a2e95d634786c92704f978adf.tar.gz
+    url: https://github.com/pgenie-io/api/archive/67cb57a9e0a3a73288f4e5b203c25701b3db0689.tar.gz
 snapshots:
 - completed:
     sha256: 656fa7a1ff5ddd147cce5a0aabd6fd70255f2ac60fd1294a1228b00a19b1731f

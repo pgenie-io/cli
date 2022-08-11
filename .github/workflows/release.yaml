@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - dev
 
 jobs:
   get-metadata:
@@ -23,6 +24,7 @@ jobs:
         with: 
           tag: v${{ steps.get-metadata.outputs.version }}
       - name: Fail if tag exists
+        if: github.ref == 'refs/heads/master'
         run: |
           if [ ${{ steps.check-tag.outputs.exists }} == true ]
           then
@@ -35,7 +37,9 @@ jobs:
     needs:
       - get-metadata
     env:
-      ARTIFACT: artifact/${{ needs.get-metadata.outputs.name }}-v${{ needs.get-metadata.outputs.version }}-linux-x64.tar.xz
+      FILENAME: ${{ needs.get-metadata.outputs.name }}-v${{ needs.get-metadata.outputs.version }}-linux-x64.tar.xz
+    outputs:
+      filename: ${{env.FILENAME}}
     steps:
       - uses: actions/checkout@v3
       - id: setup-haskell
@@ -50,11 +54,11 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('stack.yaml.lock') }}-${{ hashFiles('**.cabal') }}
           restore-keys: ${{ runner.os }}-
       - run: stack build --local-bin-path artifact --copy-bins
-      - run: tar cJvf "${{env.ARTIFACT}}" -C artifact pgn
+      - run: tar cJvf artifact/"${{env.FILENAME}}" -C artifact pgn
       - uses: actions/upload-artifact@v3
         with:
           name: linux-x64
-          path: ${{env.ARTIFACT}}
+          path: artifact/${{env.FILENAME}}
           if-no-files-found: error
 
   build-macos-artifact:
@@ -119,12 +123,34 @@ jobs:
           path: artifact/${{env.ARTIFACT_NAME}}
           if-no-files-found: error
 
+  test-e2e:
+    runs-on: ubuntu-latest
+    needs:
+      - build-linux-artifact
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: linux-x64
+
+      - run: |
+          tar -xf ${{needs.build-linux-artifact.outputs.filename}}
+          mv pgn /usr/local/bin
+
+      - uses: actions/checkout@v3
+        with:
+          repository: pgenie-io/demo
+          ref: 5af33c319fc5ad20a5617a88a60c539f1171d9cb
+
+      - run: pgn
+
   release:
+    if: github.ref == 'refs/heads/master'
     needs:
       - get-metadata
       - build-linux-artifact
       - build-macos-artifact
       - build-windows-artifact
+      - test-e2e
     runs-on: ubuntu-latest
     env:
       DRAFT: false
