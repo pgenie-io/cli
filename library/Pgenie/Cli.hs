@@ -58,6 +58,7 @@ generate ::
   (BVec (Path, Text)) ->
   IO ()
 generate secure host port configVersion configContents migrations queries = do
+  traceM $ "Generating: " <> show (secure, host, port, configVersion)
   res <- Client.run op secure host port
   res <- case res of
     Left err -> case err of
