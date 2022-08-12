@@ -11,7 +11,8 @@ common base-settings
     coalmine,
     directory,
     optima,
-    pgenie-api,
+    pgenie-client,
+    pgenie-protocol,
     rerebase,
     safe,
 
