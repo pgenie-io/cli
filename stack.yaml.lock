@@ -5,6 +5,90 @@
 
 packages:
 - completed:
+    name: coalmine
+    pantry-tree:
+      sha256: e421d8599d9471cd7a261dace2fc65adaf146946d08533239a6c56fd1d7c9728
+      size: 9639
+    commit: 394ba4935cc1e9927da49b4189ff09b9c9058ab1
+    git: https://github.com/nikita-volkov/coalmine
+    version: 0.1.0.5
+  original:
+    commit: 394ba4935cc1e9927da49b4189ff09b9c9058ab1
+    git: https://github.com/nikita-volkov/coalmine
+- completed:
+    name: moore-machines
+    pantry-tree:
+      sha256: 3d1505067d5c8599e9843ed45ec2bc587fa5100c448f558ca5db2c97fb55706f
+      size: 887
+    commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
+    git: https://github.com/nikita-volkov/moore-machines
+    version: '0.1'
+  original:
+    commit: 7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290
+    git: https://github.com/nikita-volkov/moore-machines
+- completed:
+    name: structure-kit
+    pantry-tree:
+      sha256: b7779ebe935d65c0b4f6e3ea8b5f5011abdabf362b1673826545c93625e050ad
+      size: 3500
+    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
+    git: https://github.com/nikita-volkov/structure-kit
+    version: 0.1.0.1
+  original:
+    commit: 46ffb6527c48f8a718adecd21a313f0b1ba5e81c
+    git: https://github.com/nikita-volkov/structure-kit
+- completed:
+    name: canapi
+    pantry-tree:
+      sha256: 54c44986c3d7f8daa4464e4e097f312dc3ac0c02f7eb5fbb8bba3a6e6d19487a
+      size: 1319
+    commit: 02f1d9ffea90522a3a0968305793a7f507c7da59
+    git: https://github.com/nikita-volkov/canapi
+    version: '0.1'
+  original:
+    commit: 02f1d9ffea90522a3a0968305793a7f507c7da59
+    git: https://github.com/nikita-volkov/canapi
+- completed:
+    name: lean-http-client
+    pantry-tree:
+      sha256: 64da0f3390166969e2fe6a140d847c315258f9bcb8fcaf3169fd78b4b25b6f6f
+      size: 544
+    commit: 52343895df1e5ae49159b8c5f76a50ac438216b1
+    git: https://github.com/nikita-volkov/lean-http-client
+    version: '0.1'
+  original:
+    commit: 52343895df1e5ae49159b8c5f76a50ac438216b1
+    git: https://github.com/nikita-volkov/lean-http-client
+- completed:
+    name: distillery
+    pantry-tree:
+      sha256: 03d32965a35914b68bdaa149db48ce66e774783360f5b7d8b18db72de61b7baf
+      size: 524
+    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
+    git: https://github.com/nikita-volkov/distillery
+    version: '0.1'
+  original:
+    commit: 2c2905f2addb0d1925c43d427fcf65340ee64b2a
+    git: https://github.com/nikita-volkov/distillery
+- completed:
+    name: acquire
+    pantry-tree:
+      sha256: e194150d070a0e4f07e5f2285e82f177312f328c7490f3a659f361b4f6324d00
+      size: 438
+    commit: 75194757308ae9340b0e2eda46d8db4d25af7516
+    git: https://github.com/metrix-ai/acquire
+    version: 0.3.1
+  original:
+    commit: 75194757308ae9340b0e2eda46d8db4d25af7516
+    git: https://github.com/metrix-ai/acquire
+- completed:
+    pantry-tree:
+      sha256: 520aa5f59b55c14d27115a801f499f940a563849b0c54876bcd6be41f6450713
+      size: 456
+    hackage: cereal-data-dword-0.1.1@sha256:a3fa6dfafaeeb3774c5888dfa601d561ce05b0af66f52859970247e58135d47e,1381
+  original:
+    hackage: cereal-data-dword-0.1.1
+- completed:
     pantry-tree:
       sha256: 946dbffdad0a92dbdeeaaabb1c7ac2451f3002561407068543fcd860cd860f15
       size: 473
@@ -12,83 +96,47 @@ packages:
   original:
     hackage: punycode-2.0
 - completed:
-    sha256: cb5603dced8ecf0452cd98df2587f23b795d3c73ac56e5f1f9278ef0dadce4cd
-    name: canapi
-    size: 13379
-    url: https://github.com/nikita-volkov/canapi/archive/02f1d9ffea90522a3a0968305793a7f507c7da59.tar.gz
     pantry-tree:
-      sha256: 54c44986c3d7f8daa4464e4e097f312dc3ac0c02f7eb5fbb8bba3a6e6d19487a
-      size: 1319
+      sha256: 51dc0ab22269973eec829ae476fb3102cfe155ffde2fd1d039dedf65c7842031
+      size: 509
+    hackage: timestamp-0.2@sha256:103fe49ce206922d3b14d57d8aff25eaf03c70fef5fcdaeaeb8416aaee163e51,1598
+  original:
+    hackage: timestamp-0.2
+- completed:
+    sha256: 3f472d976970faa4dbc3622821b27090a7c06f1f9a2e48ec4b0cad88d08d906c
+    name: pgenie-protocol
+    size: 4648
+    url: https://github.com/pgenie-io/protocol/archive/b67f3dd03e14483903526130581f4e01e58f5aee.tar.gz
+    pantry-tree:
+      sha256: dac14bbbb3ae3009716ba13aee5634c0b518bb996be5c5f026c3d75142d13591
+      size: 481
     version: '0.1'
   original:
-    url: https://github.com/nikita-volkov/canapi/archive/02f1d9ffea90522a3a0968305793a7f507c7da59.tar.gz
+    url: https://github.com/pgenie-io/protocol/archive/b67f3dd03e14483903526130581f4e01e58f5aee.tar.gz
 - completed:
-    sha256: e39a72f504b667fa32d7e4a76124d07695d289e4bd935555db864d4342d495a4
-    name: coalmine
-    size: 54136
-    url: https://github.com/nikita-volkov/coalmine/archive/394ba4935cc1e9927da49b4189ff09b9c9058ab1.tar.gz
+    sha256: 2b4726b39dc730d6c4ffd0d3574873820cc213154f1b8eee3a709dd9cd3615a0
+    name: pgenie-client
+    size: 3862
+    url: https://github.com/pgenie-io/client/archive/0c7fc193da8bc25e21ae74edcb14a2e9e03e58f1.tar.gz
     pantry-tree:
-      sha256: e421d8599d9471cd7a261dace2fc65adaf146946d08533239a6c56fd1d7c9728
-      size: 9639
-    version: 0.1.0.5
-  original:
-    url: https://github.com/nikita-volkov/coalmine/archive/394ba4935cc1e9927da49b4189ff09b9c9058ab1.tar.gz
-- completed:
-    sha256: 58b990d08a9c79ca8893c6d36b9a84f4ad50c6eab7003a706856025de8004feb
-    name: distillery
-    size: 5555
-    url: https://github.com/nikita-volkov/distillery/archive/2c2905f2addb0d1925c43d427fcf65340ee64b2a.tar.gz
-    pantry-tree:
-      sha256: 03d32965a35914b68bdaa149db48ce66e774783360f5b7d8b18db72de61b7baf
-      size: 524
+      sha256: ae6b1abd56c27a57d409c1870d7c1f400a47bfc3b92edeeb41db25ad901e7574
+      size: 287
     version: '0.1'
   original:
-    url: https://github.com/nikita-volkov/distillery/archive/2c2905f2addb0d1925c43d427fcf65340ee64b2a.tar.gz
-- completed:
-    sha256: 5fed90107db0d87be0ea190d2f2ce260e24c212b6cdce6f53566f4b57f42fc7c
-    name: lean-http-client
-    size: 10129
-    url: https://github.com/nikita-volkov/lean-http-client/archive/52343895df1e5ae49159b8c5f76a50ac438216b1.tar.gz
-    pantry-tree:
-      sha256: 64da0f3390166969e2fe6a140d847c315258f9bcb8fcaf3169fd78b4b25b6f6f
-      size: 544
-    version: '0.1'
-  original:
-    url: https://github.com/nikita-volkov/lean-http-client/archive/52343895df1e5ae49159b8c5f76a50ac438216b1.tar.gz
-- completed:
-    sha256: 412ad5ec4f887fbbb77afd2b273a44a320b3e6f044c6382bd59c572b6f69a3f1
-    name: moore-machines
-    size: 8284
-    url: https://github.com/nikita-volkov/moore-machines/archive/7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290.tar.gz
-    pantry-tree:
-      sha256: 3d1505067d5c8599e9843ed45ec2bc587fa5100c448f558ca5db2c97fb55706f
-      size: 887
-    version: '0.1'
-  original:
-    url: https://github.com/nikita-volkov/moore-machines/archive/7e95c33b203a1cfe42dbc0e0de3cec8e6fe94290.tar.gz
-- completed:
-    sha256: 2e5b01ebcbc4ec1371d2014cb04307a63239148f73a0bed55bf418e20e654ce9
-    name: structure-kit
-    size: 41529
-    url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
-    pantry-tree:
-      sha256: b7779ebe935d65c0b4f6e3ea8b5f5011abdabf362b1673826545c93625e050ad
-      size: 3500
-    version: 0.1.0.1
-  original:
-    url: https://github.com/nikita-volkov/structure-kit/archive/46ffb6527c48f8a718adecd21a313f0b1ba5e81c.tar.gz
-- completed:
-    sha256: fe987d5b19fbd3441f2e9f3b355c5b20912671e19be7a6bc6fecb2b64fd53ba2
-    name: pgenie-api
-    size: 5201
-    url: https://github.com/pgenie-io/api/archive/bbd1140c27887f4a2e95d634786c92704f978adf.tar.gz
-    pantry-tree:
-      sha256: 208d4e3e54b54a56ede85f371ca61d53e13fc6d458bc7877a77b2aa02ccfb898
-      size: 634
-    version: '0.1'
-  original:
-    url: https://github.com/pgenie-io/api/archive/bbd1140c27887f4a2e95d634786c92704f978adf.tar.gz
+    url: https://github.com/pgenie-io/client/archive/0c7fc193da8bc25e21ae74edcb14a2e9e03e58f1.tar.gz
 snapshots:
+- completed:
+    sha256: d018d3b747f154dc140fe0ddb45abec9a7ca1a2f4c479bb4009e218df1912439
+    size: 371
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/aab5e5e5b06fcd71643997fe638323085adb1cff/snapshot.yaml
+  original:
+    url: https://raw.githubusercontent.com/pgenie-io/stack-snapshot/aab5e5e5b06fcd71643997fe638323085adb1cff/snapshot.yaml
+- completed:
+    sha256: dc3e96947dfbfe0b670c530f87c226790ab1bae540aa720615ad5a7e3cf57034
+    size: 873
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/13a943d74ea19bd920db760a56206f906acb1ef8/snapshot.yaml
+  original:
+    url: https://raw.githubusercontent.com/nikita-volkov/stack-snapshot/13a943d74ea19bd920db760a56206f906acb1ef8/snapshot.yaml
 - completed:
     sha256: 656fa7a1ff5ddd147cce5a0aabd6fd70255f2ac60fd1294a1228b00a19b1731f
     size: 628888

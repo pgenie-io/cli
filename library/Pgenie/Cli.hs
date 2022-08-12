@@ -6,10 +6,10 @@ import qualified Data.Text.IO as TextIO
 import qualified Data.Version as BaseVersion
 import qualified Optima
 import qualified Paths_pgenie_cli as CabalMetadata
-import qualified Pgenie.Api.Client as Client
-import qualified Pgenie.Api.Protocol as Protocol
 import qualified Pgenie.Cli.ConfigFilesListing as ConfigFilesListing
 import qualified Pgenie.Cli.ServiceUrl as ServiceUrl
+import qualified Pgenie.Client as Client
+import qualified Pgenie.Protocol as Protocol
 import qualified System.Directory as Directory
 
 main :: IO ()
