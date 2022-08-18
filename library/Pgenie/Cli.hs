@@ -18,7 +18,9 @@ main = do
   (configVersion, configPath, configContents) <- ConfigFilesListing.chooseAndReadConfigHappily
   migrations <- loadSqlFiles "migrations"
   queries <- loadSqlFiles "queries"
+  putStrLn "Processing"
   generate serviceUrlSecure serviceUrlHost serviceUrlPort configVersion configContents migrations queries
+  putStrLn "Ok"
 
 readArgs :: IO ServiceUrl.ServiceUrl
 readArgs =
