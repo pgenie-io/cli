@@ -1,5 +1,6 @@
 module Pgenie.Cli (main) where
 
+import qualified Coalmine.BaseExtras.IO as IO
 import qualified Coalmine.EvenSimplerPaths as Path
 import Coalmine.Prelude
 import qualified Data.Text.IO as TextIO
@@ -14,11 +15,12 @@ import qualified System.Directory as Directory
 
 main :: IO ()
 main = do
+  IO.disableBuffering
   ServiceUrl.ServiceUrl {..} <- readArgs
   (configVersion, configPath, configContents) <- ConfigFilesListing.chooseAndReadConfigHappily
+  putStrLn "Processing"
   migrations <- loadSqlFiles "migrations"
   queries <- loadSqlFiles "queries"
-  putStrLn "Processing"
   generate serviceUrlSecure serviceUrlHost serviceUrlPort configVersion configContents migrations queries
   putStrLn "Ok"
 
